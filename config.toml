@@ -1,0 +1,4 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'kelvinkoon.dev'
+theme = "kelvinkoondev_v1"
