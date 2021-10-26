@@ -1,7 +1,7 @@
 {{- range $.Site.Data.projects -}}
 <div>
-    <p value="project_name">{{ .name }}</p>
-    <p value="project_desc">{{ .desc }}</p>
+    <p class="project_name">{{ .name }}</p>
+    <p class="project_desc">{{ .desc }}</p>
     {{- range .links -}}
     <a href="{{.link}}" target="_blank">{{.link_name}}</a>
     {{- end -}}

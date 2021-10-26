@@ -1,8 +1,8 @@
 {{- range $.Site.Data.jobs -}}
 <div>
-    <p value="job_name">{{ .name }}</p>
-    <p value="job_title">{{ .title }}</p>
-    <p value="job_team">{{ .team }}</p>
-    <p value="job_date">{{ .date }}</p>
+    <p class="job_name">{{ .name }}</p>
+    <p class="job_title">{{ .title }}</p>
+    <p class="job_team">{{ .team }}</p>
+    <p class="job_date">{{ .date }}</p>
 </div>
 {{ end }}

@@ -1,0 +1,25 @@
+.header {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 60%,
+        rgba(182, 216, 242) 50%
+    );
+}
+
+.job_name {
+    color: #155084;
+    transition: all 0.3s ease;
+}
+
+.job_name:hover {
+    color: #b6d8f2;
+}
+
+.project_name {
+    color: #155084;
+    transition: all 0.3s ease;
+}
+
+.project_name:hover {
+    color: #b6d8f2;
+}

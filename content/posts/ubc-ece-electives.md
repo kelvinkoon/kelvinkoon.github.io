@@ -5,4 +5,8 @@ tags: ["academic"]
 draft: false
 ---
 
-Placeholder for UBC ECE Electives.
+Placeholder for UBC ECE Electives. _CPEN431_
+
+```
+electives = ["cpen400d", "elec331"]
+```
