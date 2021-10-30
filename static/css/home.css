@@ -13,7 +13,7 @@ body {
 }
 
 .menu-item {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
     color: #087b9c;
     background-color: rgba(220, 220, 220, 0.3);
@@ -22,7 +22,7 @@ body {
 }
 
 .menu-item:hover {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
     color: #8bc5cd;
     background-color: rgba(220, 220, 220, 0.3);
@@ -39,20 +39,21 @@ body {
 }
 
 .home {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
+    margin-top: 70px;
 }
 
 .home a {
-    font-family: "Noto Sans", sans-serif;
-    font-size: 35px;
+    font-family: "Inter", sans-serif;
+    font-size: 45px;
     color: black;
     border-bottom: none;
 }
 
 .home a:hover {
-    font-family: "Noto Sans", sans-serif;
-    font-size: 35px;
-    color: #087b9c;
+    font-family: "Inter", sans-serif;
+    font-size: 45px;
+    color: #e64a6a;
     border-bottom: none;
 }
 
@@ -73,15 +74,67 @@ body {
 .job-info {
     width: 100%;
     margin-left: -2px;
+    margin-bottom: 10px;
+}
+
+.job-name a {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #087b9c;
+    border-bottom: none;
+    transition: all 0.3s ease;
+}
+
+.job-name a:hover {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #8bc5cd;
+    border-bottom: none;
+    transition: all 0.3s ease;
 }
 
 .job-date {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
     text-align: right;
+}
+
+.job-title {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.job-team {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
+    color: rgba(34, 36, 39, 0.6);
 }
 
 .project-info {
     width: 100%;
     margin-left: -2px;
+    margin-bottom: 10px;
+}
+
+.project-name a {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #087b9c;
+    border-bottom: none;
+    transition: all 0.3s ease;
+}
+
+.project-name a:hover {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #8bc5cd;
+    border-bottom: none;
+    transition: all 0.3s ease;
 }
 
 .project-links {
@@ -90,6 +143,11 @@ body {
 
 .project-link {
     margin: 0px 4px 0px 4px;
+}
+
+.project-desc {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
 }
 
 .posts-info {
@@ -118,6 +176,6 @@ a {
 a:hover {
     font-family: "Noto Sans", sans-serif;
     font-size: 15px;
-    color: #ee6a7b;
-    border-bottom: 2px solid #ee6a7b;
+    color: #e64a6a;
+    border-bottom: 2px solid #e64a6a;
 }

@@ -1,15 +1,21 @@
 - name: UBC Thunderbots
+  github: https://github.com/UBC-Thunderbots/Software
   desc: RoboCup SSL champions in autonomous soccer-playing robotics
   links:
       - link_name: code
         link: https://github.com/UBC-Thunderbots/Software
+      - link_name: demo
+        link: https://www.youtube.com/watch?v=pzRvbPzdZjY
       - link_name: media
         link: https://apsc.ubc.ca/news/2021/ubc-thunderbots-take-top-spot-international-robot-soccer-competition
 
 - name: babiri.net
+  github: https://github.com/kelvinkoon/babiri_v1
   desc: Competitive Pokémon stats app featuring 100,000+ users
   links:
       - link_name: code
         link: https://github.com/UBC-Thunderbots/Software
+      - link_name: demo
+        link: https://www.babiri.net/#/
       - link_name: media
         link: https://apsc.ubc.ca/news/2021/ubc-thunderbots-take-top-spot-international-robot-soccer-competition
