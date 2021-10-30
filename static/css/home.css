@@ -8,72 +8,116 @@ html {
 
 body {
     max-width: 700px;
-    margin: 18px;
+    min-width: 450px;
+    margin: 12px;
+}
+
+.menu-item {
+    font-size: 16px;
+    font-weight: bold;
+    color: #087b9c;
+    background-color: rgba(220, 220, 220, 0.3);
+    padding: 1px 2px 1px 2px;
+    border-bottom: none;
+}
+
+.menu-item:hover {
+    font-size: 16px;
+    font-weight: bold;
+    color: #8bc5cd;
+    background-color: rgba(220, 220, 220, 0.3);
+    padding: 1px 2px 1px 2px;
+    border-bottom: none;
+}
+
+.menu-item:first-of-type {
+    margin-right: 3px;
+}
+
+.menu-item:last-of-type {
+    margin-left: 3px;
 }
 
 .home {
+    margin-bottom: 6px;
+}
+
+.home a {
     font-family: "Noto Sans", sans-serif;
-    font-size: 14px;
-    color: #3973c5;
+    font-size: 35px;
+    color: black;
+    border-bottom: none;
+}
+
+.home a:hover {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 35px;
+    color: #087b9c;
+    border-bottom: none;
+}
+
+.sub-nav {
+    margin-bottom: 35px;
 }
 
 .header {
     font-family: "Noto Sans", sans-serif;
-    font-size: 14px;
+    font-size: 22px;
     background: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0) 60%,
-        #eee69c 50%
+        #ffee62 50%
     );
 }
 
 .job-info {
     width: 100%;
+    margin-left: -2px;
 }
 
 .job-date {
     text-align: right;
 }
 
-.job_name {
-    font-family: "Noto Sans", sans-serif;
-    font-size: 14px;
-    color: #729cff;
-    transition: all 0.3s ease;
+.project-info {
+    width: 100%;
+    margin-left: -2px;
 }
 
-.job_name:hover {
-    color: #ee4152;
+.project-links {
+    text-align: right;
 }
 
-.project_name {
-    font-family: "Noto Sans", sans-serif;
-    font-size: 14px;
-    color: #729cff;
-    transition: all 0.3s ease;
+.project-link {
+    margin: 0px 4px 0px 4px;
 }
 
-.project_name:hover {
-    color: #ee4152;
+.posts-info {
+    width: 100%;
+    margin-left: -2px;
+}
+
+.post-date {
+    text-align: right;
 }
 
 p {
     font-family: "Noto Sans", sans-serif;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 a {
     font-family: "Noto Sans", sans-serif;
-    font-size: 14px;
-    color: #729cff;
+    font-size: 15px;
+    color: #087b9c;
     text-decoration: none;
-    border-bottom: 2px solid #729cff;
+    border-bottom: 2px solid #087b9c;
     transition: all 0.3s ease;
 }
 
 a:hover {
     font-family: "Noto Sans", sans-serif;
-    font-size: 14px;
-    color: #f572b5;
-    border-bottom: 2px solid #f572b5;
+    font-size: 15px;
+    color: #ee6a7b;
+    border-bottom: 2px solid #ee6a7b;
 }

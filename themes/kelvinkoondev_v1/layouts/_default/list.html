@@ -1,9 +1,32 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
+<h2>
+    <span class="header">{{ .Title }}</span>
+</h2>
+<table class="posts-info">
 {{ range .Pages.ByPublishDate.Reverse }}
-<p>
-    <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    {{ partial "metadata.html" . }}
-</p>
-{{ end }}
-{{ end }}
+    <tr>
+        <td class="post-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </td>
+        {{ $dateTime := .PublishDate.Format "2006-01-02" }} {{ $dateFormat :=
+        .Site.Params.dateFormat | default "Jan 2, 2006" }}
+        <td class="post-date"><time datetime="{{ $dateTime }}"
+            >{{ .PublishDate.Format $dateFormat }}</time
+        ></td>
+        </tr>
+        <tr>
+            <td>
+                <p>[
+                {{ with .Params.tags }} {{ range $i, $t :=. }}{{ if $i }},&nbsp;{{ end }} {{ $href := print (absURL "tags/")
+                (urlize .) }}
+                <a href="{{ $href }}"
+                    >{{ . }}</a
+                >
+                {{ end }} {{ end }}
+                ]</p>
+            </td>
+        </tr>
+    </tr>
+</table>
+
+{{ end }} {{ end }}

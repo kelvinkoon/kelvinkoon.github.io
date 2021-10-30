@@ -18,7 +18,7 @@
         {{ end }}
         </div>
     <p>Written {{ .Date.Format "Mon Jan 2, 2006" }}</p>
-    <p>{{ .WordCount }} Words</p>
+    <p>{{ div .WordCount 130 }} minutes</p>
     <div>
             <article id="content">
             {{ .Content }}
