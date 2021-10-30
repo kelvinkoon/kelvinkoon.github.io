@@ -158,6 +158,7 @@ body {
 
 .post-quote {
     font-style: italic;
+    margin-bottom: 45px;
 }
 
 .post-date {
@@ -209,6 +210,44 @@ body {
     border-bottom: none;
 }
 
+.post-meta {
+    margin-top: 25px;
+}
+
+.copyright {
+    margin-top: 65px;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.source {
+    margin-right: 3px;
+}
+
+.twitter {
+    margin-left: 3px;
+}
+
+h1 {
+    font-family: "Noto Sans", sans-serif;
+}
+
+h2 {
+    font-family: "Noto Sans", sans-serif;
+}
+
+h3 {
+    font-family: "Noto Sans", sans-serif;
+}
+
+li {
+    font-family: "Noto Sans", sans-serif;
+}
+
 p {
     font-family: "Noto Sans", sans-serif;
     font-size: 16px;
@@ -230,20 +269,7 @@ a:hover {
     border-bottom: 2px solid #e64a6a;
 }
 
-.copyright {
-    margin-top: 65px;
-    text-align: center;
-}
-
-.footer-links {
-    margin-bottom: 45px;
-    text-align: center;
-}
-
-.source {
-    margin-right: 3px;
-}
-
-.twitter {
-    margin-left: 3px;
+hr {
+    margin-top: 30px;
+    width: 40%;
 }
