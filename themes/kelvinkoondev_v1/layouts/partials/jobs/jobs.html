@@ -1,8 +1,16 @@
 {{- range $.Site.Data.jobs -}}
-<div>
-    <p class="job_name">{{ .name }}</p>
-    <p class="job_title">{{ .title }}</p>
-    <p class="job_team">{{ .team }}</p>
-    <p class="job_date">{{ .date }}</p>
-</div>
+<table class="job-info">
+    <tr>
+        <td>
+            <a href="{{ .link }}" target="_blank">{{ .name }}</a>
+        </td>
+        <td class="job-date">{{ .date }}</td>
+    </tr>
+    <tr>
+        <td>{{ .title }}</td>
+    </tr>
+    <tr>
+        <td>{{ .team }}</td>
+    </tr>
+</table>
 {{ end }}

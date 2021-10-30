@@ -1,25 +1,79 @@
+/* @media screen and (min-width: 900px) {
+} */
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    max-width: 700px;
+    margin: 18px;
+}
+
+.home {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    color: #3973c5;
+}
+
 .header {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
     background: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0) 60%,
-        rgba(182, 216, 242) 50%
+        #eee69c 50%
     );
 }
 
+.job-info {
+    width: 100%;
+}
+
+.job-date {
+    text-align: right;
+}
+
 .job_name {
-    color: #155084;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    color: #729cff;
     transition: all 0.3s ease;
 }
 
 .job_name:hover {
-    color: #b6d8f2;
+    color: #ee4152;
 }
 
 .project_name {
-    color: #155084;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    color: #729cff;
     transition: all 0.3s ease;
 }
 
 .project_name:hover {
-    color: #b6d8f2;
+    color: #ee4152;
+}
+
+p {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+}
+
+a {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    color: #729cff;
+    text-decoration: none;
+    border-bottom: 2px solid #729cff;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    color: #f572b5;
+    border-bottom: 2px solid #f572b5;
 }

@@ -1,9 +1,15 @@
 {{- range $.Site.Data.projects -}}
 <div>
-    <p class="project_name">{{ .name }}</p>
-    <p class="project_desc">{{ .desc }}</p>
-    {{- range .links -}}
-    <a href="{{.link}}" target="_blank">{{.link_name}}</a>
-    {{- end -}}
+    <table>
+        <tr>
+            <td>{{ .name }}</td>
+            {{- range .links -}}
+            <td><a href="{{.link}}" target="_blank">{{.link_name}}</a></td>
+            {{- end -}}
+        </tr>
+        <tr>
+            <td>{{ .desc }}</td>
+        </tr>
+    </table>
 </div>
 {{ end }}
