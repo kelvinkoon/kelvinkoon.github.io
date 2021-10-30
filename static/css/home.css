@@ -79,7 +79,7 @@ body {
 
 .job-name a {
     font-family: "Noto Sans", sans-serif;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: bold;
     color: #087b9c;
     border-bottom: none;
@@ -88,7 +88,7 @@ body {
 
 .job-name a:hover {
     font-family: "Noto Sans", sans-serif;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: bold;
     color: #8bc5cd;
     border-bottom: none;
@@ -97,7 +97,7 @@ body {
 
 .job-date {
     font-family: "Noto Sans", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     text-align: right;
 }
 
@@ -109,7 +109,7 @@ body {
 
 .job-team {
     font-family: "Noto Sans", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     color: rgba(34, 36, 39, 0.6);
 }
 
@@ -121,7 +121,7 @@ body {
 
 .project-name a {
     font-family: "Noto Sans", sans-serif;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: bold;
     color: #087b9c;
     border-bottom: none;
@@ -130,7 +130,7 @@ body {
 
 .project-name a:hover {
     font-family: "Noto Sans", sans-serif;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: bold;
     color: #8bc5cd;
     border-bottom: none;
@@ -147,7 +147,7 @@ body {
 
 .project-desc {
     font-family: "Noto Sans", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .posts-info {
@@ -161,12 +161,12 @@ body {
 
 p {
     font-family: "Noto Sans", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 a {
     font-family: "Noto Sans", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     color: #087b9c;
     text-decoration: none;
     border-bottom: 2px solid #087b9c;
@@ -175,7 +175,25 @@ a {
 
 a:hover {
     font-family: "Noto Sans", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     color: #e64a6a;
     border-bottom: 2px solid #e64a6a;
+}
+
+.copyright {
+    margin-top: 65px;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.source {
+    margin-right: 3px;
+}
+
+.twitter {
+    margin-left: 3px;
 }
