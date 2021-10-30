@@ -2,28 +2,31 @@
 <h2>
     <span class="header">{{ .Title }}</span>
 </h2>
-<table class="posts-info">
+<p class="post-quote">"The truth about stories is, that's all we are."
+    {{ range $i, $sequence :=  (seq 15) }}
+    &nbsp;
+    {{ end }}
+</br>- Thomas King</p>
 {{ range .Pages.ByPublishDate.Reverse }}
+<table class="posts-info">
     <tr>
         <td class="post-title">
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </td>
-        {{ $dateTime := .PublishDate.Format "2006-01-02" }} {{ $dateFormat :=
-        .Site.Params.dateFormat | default "Jan 2, 2006" }}
-        <td class="post-date"><time datetime="{{ $dateTime }}"
-            >{{ .PublishDate.Format $dateFormat }}</time
-        ></td>
+        <td class="post-date">
+            <p>[{{ .Date | time.Format ":date_short" }}]</p>
+        </td>
         </tr>
         <tr>
-            <td>
-                <p>[
-                {{ with .Params.tags }} {{ range $i, $t :=. }}{{ if $i }},&nbsp;{{ end }} {{ $href := print (absURL "tags/")
+            <td class="post-tags">
+                [
+                {{ with .Params.tags }} {{ range $i, $t :=. }}{{ if $i }},{{ end }} {{ $href := print (absURL "tags/")
                 (urlize .) }}
                 <a href="{{ $href }}"
                     >{{ . }}</a
                 >
                 {{ end }} {{ end }}
-                ]</p>
+                ]
             </td>
         </tr>
     </tr>

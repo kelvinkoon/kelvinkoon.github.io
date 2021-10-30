@@ -8,7 +8,6 @@ html {
 
 body {
     max-width: 700px;
-    min-width: 450px;
     margin: 12px;
 }
 
@@ -63,7 +62,7 @@ body {
 
 .header {
     font-family: "Noto Sans", sans-serif;
-    font-size: 22px;
+    font-size: 25px;
     background: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0) 60%,
@@ -153,10 +152,61 @@ body {
 .posts-info {
     width: 100%;
     margin-left: -2px;
+    margin-bottom: 20px;
+    border-spacing: 2px 0px;
+}
+
+.post-quote {
+    font-style: italic;
 }
 
 .post-date {
     text-align: right;
+}
+
+.post-title a {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #087b9c;
+    border-bottom: none;
+    transition: all 0.3s ease;
+}
+
+.post-title a:hover {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #e64a6a;
+    border-bottom: none;
+    transition: all 0.3s ease;
+}
+
+.post-date p {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.post-tags {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.post-tags a {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: none;
+    color: rgba(34, 36, 39, 0.6);
+}
+
+.post-tags a:hover {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    border-bottom: none;
 }
 
 p {
