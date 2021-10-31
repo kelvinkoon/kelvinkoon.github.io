@@ -3,9 +3,6 @@
     <span class="header">{{ .Title }}</span>
 </h2>
 <p class="post-quote">"The truth about stories is, that's all we are."
-    {{ range $i, $sequence :=  (seq 15) }}
-    &nbsp;
-    {{ end }}
 </br>- Thomas King</p>
 {{ range .Pages.ByPublishDate.Reverse }}
 <table class="posts-info">

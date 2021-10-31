@@ -5,6 +5,8 @@ tags: ["leetcode", "interviews"]
 draft: false
 ---
 
+## Prologue
+
 The guide you are reading assumes you have taken [CPSC259](https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=259) if you are in ELEC or [CPSC221](https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=221) if you are in CPEN / CPSC, which are the introductory Data Structures and Algorithms (DS/A) courses offered at UBC. The guide aims to offer insight on applying the theory from the courses to the interviews.
 
 ## What is LeetCode?

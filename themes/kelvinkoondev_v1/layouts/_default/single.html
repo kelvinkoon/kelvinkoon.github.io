@@ -1,38 +1,42 @@
 {{ define "main" }}
 <section id="main">
-    <h1 id="title">{{ .Title }}</h1>
-    <div>
-        {{ with .Params.topics }}
-        <ul id="topics">
-        {{ range . }}
-            <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
-        {{ end }}
-        </ul>
-        {{ end }}
+    <h1>
+        <span class="header">{{ .Title }}</span>
+    </h1>
+    <p class="post-detail-date">{{ .Date.Format "Jan 2, 2006" }}  
+        · {{ div .WordCount 130 }} min read</p>
+    <div class="post-tags">
         {{ with .Params.tags }}
-        <ul id="tags">
-        {{ range . }}
-            <li> <a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
+            [
+        {{ range $i, $t :=. }}{{ if $i }},{{ end }}
+            <a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>
         {{ end }}
-        </ul>
+        ]
         {{ end }}
-        </div>
-    <p>Written {{ .Date.Format "Mon Jan 2, 2006" }}</p>
-    <p>{{ div .WordCount 130 }} minutes</p>
+    </div>
+    <h2>
+        <span class="toc-header">Table of Contents</span>
+    </h2>
+    <div class="toc">
+        {{ .TableOfContents }}
+    </div>
     <div>
             <article id="content">
-            {{ .Content }}
+                {{ .Content }}
             </article>
     </div>
 </section>
+<p>
+    <a class="menu-item" href="/posts">← return to blog</a>
+</p>
 <hr>
 <aside id="meta" class="post-meta">
     <div>
         {{ with .PrevInSection }}
-          <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+          <a class="previous" href="{{.Permalink}}">{{.Title}} →</a>
         {{ end }}
         {{ with .NextInSection }}
-          <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+          <a class="next" href="{{.Permalink}}">← {{.Title}}</a>
         {{ end }}
     </div>
 </aside>

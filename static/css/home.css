@@ -7,7 +7,8 @@ html {
 }
 
 body {
-    max-width: 700px;
+    max-width: 600px;
+    width: 100%;
     margin: 12px;
 }
 
@@ -152,13 +153,13 @@ body {
 .posts-info {
     width: 100%;
     margin-left: -2px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     border-spacing: 2px 0px;
 }
 
 .post-quote {
     font-style: italic;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
 }
 
 .post-date {
@@ -167,7 +168,7 @@ body {
 
 .post-title a {
     font-family: "Noto Sans", sans-serif;
-    font-size: 22px;
+    font-size: 21px;
     font-weight: bold;
     color: #087b9c;
     border-bottom: none;
@@ -176,7 +177,7 @@ body {
 
 .post-title a:hover {
     font-family: "Noto Sans", sans-serif;
-    font-size: 22px;
+    font-size: 21px;
     font-weight: bold;
     color: #e64a6a;
     border-bottom: none;
@@ -197,7 +198,7 @@ body {
 
 .post-tags a {
     font-family: "Noto Sans", sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
     border-bottom: none;
     color: rgba(34, 36, 39, 0.6);
@@ -205,7 +206,7 @@ body {
 
 .post-tags a:hover {
     font-family: "Noto Sans", sans-serif;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: bold;
     border-bottom: none;
 }
@@ -214,13 +215,32 @@ body {
     margin-top: 25px;
 }
 
+.post-detail-date {
+    font-size: 15px;
+    color: rgba(34, 36, 39, 0.6);
+}
+
+.toc {
+    margin-bottom: 40px;
+}
+
+.toc-header {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 25px;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 60%,
+        #8bc5cd 50%
+    );
+}
+
 .copyright {
     margin-top: 65px;
     text-align: center;
 }
 
 .footer-links {
-    margin-bottom: 45px;
+    margin-bottom: 35px;
     text-align: center;
 }
 
@@ -244,13 +264,25 @@ h3 {
     font-family: "Noto Sans", sans-serif;
 }
 
-li {
-    font-family: "Noto Sans", sans-serif;
-}
-
 p {
     font-family: "Noto Sans", sans-serif;
     font-size: 16px;
+}
+
+li {
+    font-family: "Noto Sans", sans-serif;
+    margin-top: 10px;
+}
+
+li > a {
+    margin-top: 10px;
+    background-color: rgba(220, 220, 220, 0.3);
+}
+
+li > a:hover {
+    margin-top: 10px;
+    color: #8bc5cd;
+    border-bottom: 2px solid #8bc5cd;
 }
 
 a {
@@ -270,6 +302,9 @@ a:hover {
 }
 
 hr {
-    margin-top: 30px;
-    width: 40%;
+    height: 2px;
+    background-color: #8bc5cd;
+    border: none;
+    margin-top: 35px;
+    width: 25%;
 }
