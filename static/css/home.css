@@ -116,7 +116,7 @@ body {
 .project-info {
     width: 100%;
     margin-left: -2px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .project-name a {
@@ -153,13 +153,13 @@ body {
 .posts-info {
     width: 100%;
     margin-left: -2px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     border-spacing: 2px 0px;
 }
 
 .post-quote {
     font-style: italic;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .post-date {
@@ -193,6 +193,7 @@ body {
 .post-tags {
     font-family: "Noto Sans", sans-serif;
     font-size: 12px;
+    margin-top: -8px;
     font-weight: bold;
 }
 
@@ -218,6 +219,7 @@ body {
 .post-detail-date {
     font-size: 15px;
     color: rgba(34, 36, 39, 0.6);
+    margin-top: -12px;
 }
 
 .toc {
