@@ -1,0 +1,111 @@
+<!doctype html><html><link rel=preconnect href=https://fonts.googleapis.com>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel=stylesheet>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel=stylesheet>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet href=/css/home.css type=text/css media=all>
+<body><h1 class=home><a href=/>Kelvin Koon</a></h1>
+<div class=sub-nav>
+<a href=/posts class=menu-item>/blog</a>
+<a href=/resume.pdf target=_blank class=menu-item>/resume</a>
+<a href=https://github.com/kelvinkoon target=_blank class=menu-item>/github</a>
+</div>
+<div id=content>
+<section id=main>
+<h1>
+<span class=header>LeetCode Intro Guide</span>
+</h1>
+<p class=post-detail-date>Aug 14, 2021
+· 8 min read</p>
+<div class=post-tags>
+[
+<a href=http://example.org/tags/leetcode>leetcode</a>
+,
+<a href=http://example.org/tags/interviews>interviews</a>
+]
+</div>
+<h2>
+<span class=toc-header>Table of Contents</span>
+</h2>
+<div class=toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#prologue>Prologue</a></li>
+<li><a href=#what-is-leetcode>What is LeetCode?</a></li>
+<li><a href=#motivation>Motivation</a></li>
+<li><a href=#preparation-resources>Preparation Resources</a></li>
+<li><a href=#dsa-preparation>DS/A Preparation</a>
+<ul>
+<li><a href=#paid-resources>Paid Resources</a></li>
+</ul>
+</li>
+<li><a href=#approaching-mock-interviews>Approaching Mock Interviews</a></li>
+<li><a href=#building-your-understanding>Building Your Understanding</a></li>
+<li><a href=#final-words>Final Words</a></li>
+</ul>
+</nav>
+</div>
+<div>
+<article id=content>
+<h2 id=prologue>Prologue</h2>
+<p>The guide you are reading assumes you have taken <a href="https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=259">CPSC259</a> if you are in ELEC or <a href="https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=221">CPSC221</a> if you are in CPEN / CPSC, which are the introductory Data Structures and Algorithms (DS/A) courses offered at UBC. The guide aims to offer insight on applying the theory from the courses to the interviews.</p>
+<h2 id=what-is-leetcode>What is LeetCode?</h2>
+<p><a href=https://leetcode.com/>LeetCode</a> (LC) is a website for software interview preparation focusing on DS/A. There are many questions available for practice, as you can run your solution against their test-cases in any programming language. Python, C++, and Java are common languages for tackling interviews, but LC also accepts many other languages. Python is particularly popular for its succinct syntax.</p>
+<h2 id=motivation>Motivation</h2>
+<p><strong>If you are aiming for large tech companies, you will have to invest time to practice DS/A questions.</strong> LC is <a href="https://twitter.com/mxcl/status/608682016205344768?lang=en">notorious</a> for being mandatory when interviewing at companies such as Amazon, Microsoft, Google, etc. The technical interviews will almost always consist of questions akin to LC.</p>
+<p><strong>If you are not aiming for large tech companies, you will likely not have to invest as much time practicing DS/A questions.</strong> Local companies may choose to run through your resume or domain-specific knowledge. For instance, a networking company may ask about UDP vs TCP. What you get asked is very dependent on the company, team, and position. Be warned, DS/A questions may still be found at smaller companies.</p>
+<p>LC is primarily aimed at Software Engineering roles. Other roles such as Firmware or Systems Engineering may be asked fewer LC questions.</p>
+<h2 id=preparation-resources>Preparation Resources</h2>
+<p>Coming from CPSC259 / CPSC221, you should be acquainted with the concept of time complexity (ie. Big O notation). However, you may not be as familiar with space complexity (especially in the case of CPSC259).</p>
+<p>It is important to be familiar with the time / space complexity of common data structures. Asking yourself why <code>X</code> data structure has <code>Y</code> can help develop the time / space complexity intuition. Time and space complexity are often trade-offs. You may be able to run your solution in O(n^2) time and O(1) space, but the interviewer may want a lower time complexity. In many cases, you&rsquo;ll find the solution can be converted to an O(n) time and O(n) space complexity through using additional data structures such as a hash map.</p>
+<p>For a refresher in time / space complexity, I highly recommend this <a href="https://www.youtube.com/watch?v=D6xkbGLQesk">video</a> and this <a href=https://www.freecodecamp.org/news/10-common-data-structures-explained-with-videos-exercises-aaff6c06fb2b/>guide</a>.</p>
+<h2 id=dsa-preparation>DS/A Preparation</h2>
+<p>A common remark among students is which questions should they prioritize. LC is already divided into DS/A categories, so one approach may be to work through your weakest category until you feel comfortable with the questions provided.</p>
+<p>For a holistic overview of interview questions, I highly recommend reading this <a href=https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions>post</a>. The questions provided encompass many frequently occuring topics or build to more complex topics. I&rsquo;ve also created a <a href="https://docs.google.com/spreadsheets/d/1O6lu-27mkdEfQAFfMB43vcqZRF57ygtJO2tCDw2ZQaY/edit?usp=sharing">Google Sheet</a> to keep track of progress, which can be downloaded for your own use.</p>
+<p>If there is limited time prior to your interview, I would recommend prioritizing Arrays, Strings, Trees, and Linked Lists. These are fairly common topics in software interviews, particularly:</p>
+<ul>
+<li>Array: <a href=https://leetcode.com/problems/two-sum/>Two Sum</a>, <a href=https://leetcode.com/problems/best-time-to-buy-and-sell-stock/>Best Time to Buy and Sell Stock</a>, <a href=https://leetcode.com/problems/contains-duplicate/>Contains Duplicate</a></li>
+<li>String: <a href=https://leetcode.com/problems/valid-palindrome/>Valid Palindrome</a>, <a href=https://leetcode.com/problems/valid-parentheses/>Valid Parentheses</a></li>
+<li>Tree: <a href=https://leetcode.com/problems/same-tree/>Same Tree</a>, <a href=https://leetcode.com/problems/maximum-depth-of-binary-tree/>Maximum Depth of a Binary Tree</a>, <a href=https://leetcode.com/problems/kth-smallest-element-in-a-bst/>Kth Smallest Element in a BST</a></li>
+<li>Linked List: <a href=https://leetcode.com/problems/reverse-linked-list/>Reverse Linked List</a>, <a href=https://leetcode.com/problems/merge-two-sorted-lists/>Merge Two Sorted Lists</a>, <a href=https://leetcode.com/problems/linked-list-cycle/>Linked List Cycle</a></li>
+</ul>
+<p>Likewise, it&rsquo;s okay to be less familiar with certain question categories. For instance, Dynamic Programming questions will likely show up less than Array questions due to their difficulty. For internships, you will likely not be asked Hard questions.</p>
+<h3 id=paid-resources>Paid Resources</h3>
+<p>LeetCode Premium is the paid service offered which will provide you with questions sorted by company frequency (eg. Top 50 Questions asked by Facebook). In my experience, the accuracy varies but Premium also unlocks exclusive questions which may be useful in preparation. I&rsquo;ve personally found LC Premium useful but not necessary given the subscription price. If you have a group willing to split the cost, it may be worth looking into.</p>
+<p>There are paid video services such as InterviewCake to provide explanations alongside problems. Having tried one of these services, I do not think they are worth the subscription for similar reasons as LC Premium. The &ldquo;Discuss&rdquo; tab on LC is often sufficient for breaking down questions.</p>
+<h2 id=approaching-mock-interviews>Approaching Mock Interviews</h2>
+<p>A common mistake is for the interviewee to immediately start writing code after the question is asked. It is an expectation the interviewee discusses the approach and assumptions before writing anything. I recommend finding friends who are also preparing for interviews to facilitate mock interviews. <a href=https://coderpad.io/>CoderPad</a> is a great codesharing environment for simulating interviews. It takes time to practice verbalizing your thought process during an interview.</p>
+<p>The following approach is what I follow:</p>
+<ol>
+<li>Read the prompt and ask questions to clarify assumptions. In particular, ask about possible input types. For instance, ask about empty strings, non-positive numbers, and edge-cases such as searching for non-existent keys in a dictionary.</li>
+<li>Go over sample inputs and outputs. This is a good opportunity to make sure you understand what the interviewer is asking for.</li>
+<li>Explain your thought process to the interviewer. If you&rsquo;re unsure, it&rsquo;s okay to ask the interviewer for hints on where to start. You can start with a &ldquo;brute-force&rdquo; solution and optimize through the interview.</li>
+<li>Write code. Explain what you are doing as you write. Verbalizing your thought process allows the interviewer to understand and help should you get stuck.</li>
+<li>Run the interviewer through your code with an example input. This is an opportunity to catch your own mistakes as you run through it.</li>
+<li>You&rsquo;ll likely be asked to explain time and space complexity at the end. Be conscious of your complexity as you discuss the solution.</li>
+<li>If the interviewer asks you to optimize the solution, think about the time / space trade-offs. Hash tables are often the first data structure I think about when asked to optimize.</li>
+</ol>
+<h2 id=building-your-understanding>Building Your Understanding</h2>
+<p>LC has a Discuss tab featuring solutions from other users. Often, there are esoteric one-liner or uncommented solutions. I recommend attempting each question for a period of time before looking at solutions for hints (eg. 15 min for Easy, 45 min for Medium). This allows you to keep moving forwards in your practice. It is also important to revisit some of the problems you&rsquo;ve previously completed after a certain time to keep yourself practiced. I recommend <a href=https://www.youtube.com/c/BackToBackSWE/videos>BackToBackSWE</a> for LC question walkthroughs.</p>
+<h2 id=final-words>Final Words</h2>
+<p>While I don&rsquo;t enjoy algorithmic interviews, LeetCode has definitely helped improve my problem-solving and communication skills. Although the process may be frustrating, it is something that can be improved with practice.</p>
+<p>Special thanks to the upper-year ECE students who helped with proofreading the original document.</p>
+</article>
+</div>
+</section>
+<p>
+<a class=menu-item href=/posts>← return to blog</a>
+</p>
+<hr>
+<aside id=meta class=post-meta>
+<div>
+<a class=next href=http://example.org/posts/ubc-ece-electives/>← An ECE Electives Review</a>
+</div>
+</aside>
+</div><p class=copyright>made with love, © 2021</p>
+<p class=footer-links>
+<a class=source href=https://github.com/kelvinkoon/kelvinkoon.dev target=_blank>source</a>
+<a class=twitter href=https://twitter.com/NotCelsiusDeg target=_blank>twitter</a>
+</p>
+</body>
+</html>
