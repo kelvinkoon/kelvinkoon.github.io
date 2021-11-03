@@ -29,7 +29,7 @@ LC is primarily aimed at Software Engineering roles. Other roles such as Firmwar
 
 Coming from CPSC259 / CPSC221, you should be acquainted with the concept of time complexity (ie. Big O notation). However, you may not be as familiar with space complexity (especially in the case of CPSC259).
 
-It is important to be familiar with the time / space complexity of common data structures. Asking yourself why `X` data structure has `Y` can help develop the time / space complexity intuition. Time and space complexity are often trade-offs. You may be able to run your solution in O(n^2) time and O(1) space, but the interviewer may want a lower time complexity. In many cases, you'll find the solution can be converted to an O(n) time and O(n) space complexity through using additional data structures such as a hash map.
+It is important to be familiar with the time / space complexity of common data structures. Asking yourself why one data structure has a specific property can help develop the time / space complexity intuition. Time and space complexity are often trade-offs. You may be able to run your solution in O(n^2) time and O(1) space, but the interviewer may want a lower time complexity. In many cases, you'll find the solution can be converted to an O(n) time and O(n) space complexity through using additional data structures such as a hash map.
 
 For a refresher in time / space complexity, I highly recommend this [video](https://www.youtube.com/watch?v=D6xkbGLQesk) and this [guide](https://www.freecodecamp.org/news/10-common-data-structures-explained-with-videos-exercises-aaff6c06fb2b/). This [cheat sheet](https://www.bigocheatsheet.com/) has also been helpful for many. As you practice, the time and space complexity of data structures will become more familiar.
 
@@ -107,15 +107,16 @@ To illustrate an approach, I'll be going over the process using [Two Sum](https:
 6. If the interviewer asks you to optimize the solution, there's a good chance a more efficient solution exists.Think about the time / space trade-offs. Hash tables are often the first data structure I think about when asked to optimize.
     > _"The solution given is O(n^2) where n is the length of nums. Maybe we can use a hash map to store values we've seen."_
     ```python
-    seen = {}
-    for i in range(len(nums)):
-        potentialTarget = target - nums[i]
-        if potentialTarget in seen:
-            return [seen[potentialTarget], i]
-        else:
-            seen[nums[i]] = i
-    # Assume we never reach here
-    return []
+    def two_sum(nums, target):
+        seen = {}
+        for i in range(len(nums)):
+            potentialTarget = target - nums[i]
+            if potentialTarget in seen:
+                return [seen[potentialTarget], i]
+            else:
+                seen[nums[i]] = i
+        # Assume we never reach here
+        return []
     ```
     > _"If you store the values, you can compute the combinations in one traversal. If we do 'target - current', we can check if we've already seen one of the values. This will be O(n) run-time and O(n) space complexity since it's we go through nums once."_
 7. You'll likely be asked to explain time and space complexity at the end. Be conscious of your complexity as you discuss the solution.
