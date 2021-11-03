@@ -115,7 +115,7 @@
 <p>Start writing code. Explain what you are doing as you write. Verbalizing your thought process allows the interviewer to understand and help should you get stuck. You don&rsquo;t need to explain everything, just the main implementation details.</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>def</span> <span style=color:#00f>two_sum</span>(nums, target):
    <span style=color:green;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(<span style=color:green>len</span>(nums)<span style=color:#666>-</span><span style=color:#666>1</span>):
-       <span style=color:green;font-weight:700>for</span> j <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(i, <span style=color:green>len</span>(nums)):
+       <span style=color:green;font-weight:700>for</span> j <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(i<span style=color:#666>+</span><span style=color:#666>1</span>, <span style=color:green>len</span>(nums)):
            <span style=color:green;font-weight:700>if</span> nums[i] <span style=color:#666>+</span> nums[j] <span style=color:#666>==</span> target:
                <span style=color:green;font-weight:700>return</span> [i, j]
    <span style=color:#408080;font-style:italic># Assume we never reach this point</span>
@@ -140,7 +140,7 @@
    <span style=color:#408080;font-style:italic># Assume we never reach here</span>
    <span style=color:green;font-weight:700>return</span> []
 </code></pre></div><blockquote>
-<p><em>&ldquo;If you store the values, you can compute the combinations in one traversal. If we do &lsquo;target - current&rsquo;, we can check if we&rsquo;ve already seen one of the values. This will be O(n) run-time and O(n) space complexity since it&rsquo;s we go through nums once."</em></p>
+<p><em>&ldquo;If you store the values, you can compute the combinations in one traversal. If we do &lsquo;target - current&rsquo;, we can check if we&rsquo;ve already seen one of the values. This will be O(n) run-time and O(n) space complexity since it&rsquo;ll go through the nums array once."</em></p>
 </blockquote>
 </li>
 <li>
