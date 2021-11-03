@@ -5,7 +5,9 @@ tags: ["academic"]
 draft: false
 ---
 
-## Prologue
+## TODO
+
+<!-- ## Prologue
 
 UBC's Electrical and Computer Engineering department offers no shortage of advanced electives for upper year students. The vast selection includes computer architecture, power systems analysis, and even quantum computing. As someone who has too many interests, I've worried about fitting all my interests into 12 credits. Though I ended up taking more credits than needed, the opportunity to dive into these specialized areas was invaluable to exploring my interests.
 
@@ -41,4 +43,4 @@ And without further ado, here are the electives I took.
 
 ## Parting Words
 
-Electives let you explore what you like and (more importantly) don't like.
+Electives let you explore what you like and (more importantly) don't like. -->

@@ -14,7 +14,6 @@ body {
 
 .menu-item {
     font-size: 17px;
-    font-weight: bold;
     color: #087b9c;
     background-color: rgba(220, 220, 220, 0.3);
     padding: 1px 2px 1px 2px;
@@ -104,7 +103,6 @@ body {
 .job-title {
     font-family: "Noto Sans", sans-serif;
     font-size: 16px;
-    font-weight: bold;
 }
 
 .job-team {
@@ -194,7 +192,6 @@ body {
     font-family: "Noto Sans", sans-serif;
     font-size: 12px;
     margin-top: -8px;
-    font-weight: bold;
 }
 
 .post-tags a {
@@ -303,10 +300,26 @@ a:hover {
     border-bottom: 2px solid #e64a6a;
 }
 
+blockquote {
+    margin-left: 0px;
+    padding-left: 15px;
+    border-left: 3px solid #087b9c;
+}
+
+blockquote p {
+    display: inline;
+}
+
 hr {
     height: 2px;
     background-color: #8bc5cd;
     border: none;
     margin-top: 35px;
     width: 25%;
+}
+
+code {
+    background-color: rgba(220, 220, 220, 0.3);
+    display: block;
+    padding: 20px;
 }

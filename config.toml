@@ -2,3 +2,5 @@ baseURL = 'https://kelvinkoon.github.io/'
 languageCode = 'en-us'
 title = 'kelvinkoon.dev'
 theme = "kelvinkoondev_v1"
+pygmentsCodefences = true
+pygmentsStyle = "pygments"
