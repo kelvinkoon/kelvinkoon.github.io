@@ -4,6 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel=stylesheet>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link rel=stylesheet href=/css/home.css type=text/css media=all>
+<link rel=stylesheet href=/css/syntax.css type=text/css media=all>
 <html>
 <head>
 <title>Kelvin Koon</title>
@@ -67,7 +68,7 @@
 <p>LC is primarily aimed at Software Engineering roles. Other roles such as Firmware or Systems Engineering may be asked fewer LC questions. Preference may be given to take-home assignments or questions closer ground to their work.</p>
 <h2 id=preparation-resources>Preparation Resources</h2>
 <p>Coming from CPSC259 / CPSC221, you should be acquainted with the concept of time complexity (ie. Big O notation). However, you may not be as familiar with space complexity (especially in the case of CPSC259).</p>
-<p>It is important to be familiar with the time / space complexity of common data structures. Asking yourself why <code>X</code> data structure has <code>Y</code> can help develop the time / space complexity intuition. Time and space complexity are often trade-offs. You may be able to run your solution in O(n^2) time and O(1) space, but the interviewer may want a lower time complexity. In many cases, you&rsquo;ll find the solution can be converted to an O(n) time and O(n) space complexity through using additional data structures such as a hash map.</p>
+<p>It is important to be familiar with the time / space complexity of common data structures. Asking yourself why one data structure has a specific property can help develop the time / space complexity intuition. Time and space complexity are often trade-offs. You may be able to run your solution in O(n^2) time and O(1) space, but the interviewer may want a lower time complexity. In many cases, you&rsquo;ll find the solution can be converted to an O(n) time and O(n) space complexity through using additional data structures such as a hash map.</p>
 <p>For a refresher in time / space complexity, I highly recommend this <a href="https://www.youtube.com/watch?v=D6xkbGLQesk">video</a> and this <a href=https://www.freecodecamp.org/news/10-common-data-structures-explained-with-videos-exercises-aaff6c06fb2b/>guide</a>. This <a href=https://www.bigocheatsheet.com/>cheat sheet</a> has also been helpful for many. As you practice, the time and space complexity of data structures will become more familiar.</p>
 <h2 id=dsa-preparation>DS/A Preparation</h2>
 <p>A common remark among students is which questions should one prioritize. LC is already divided into DS/A categories, so one approach may be to work through your weakest category until you feel comfortable with the questions provided. Anecdotally, I did not study any graph questions during my internship search since I felt the investment did not justify the likelihood I&rsquo;d receive one. Similarly, friends have opted to not study Dynamic Programming since the company hadn&rsquo;t historically asked them. Do what you think is best for what you want to achieve.</p>
@@ -145,15 +146,16 @@ Output: Because nums[0] + nums[1] == 9, we return [0, 1].
 <blockquote>
 <p><em>&ldquo;The solution given is O(n^2) where n is the length of nums. Maybe we can use a hash map to store values we&rsquo;ve seen."</em></p>
 </blockquote>
-<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>seen <span style=color:#666>=</span> {}
-<span style=color:green;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(<span style=color:green>len</span>(nums)):
-    potentialTarget <span style=color:#666>=</span> target <span style=color:#666>-</span> nums[i]
-    <span style=color:green;font-weight:700>if</span> potentialTarget <span style=color:#a2f;font-weight:700>in</span> seen:
-        <span style=color:green;font-weight:700>return</span> [seen[potentialTarget], i]
-    <span style=color:green;font-weight:700>else</span>:
-        seen[nums[i]] <span style=color:#666>=</span> i
-<span style=color:#408080;font-style:italic># Assume we never reach here</span>
-<span style=color:green;font-weight:700>return</span> []
+<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>def</span> <span style=color:#00f>two_sum</span>(nums, target):
+    seen <span style=color:#666>=</span> {}
+    <span style=color:green;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(<span style=color:green>len</span>(nums)):
+        potentialTarget <span style=color:#666>=</span> target <span style=color:#666>-</span> nums[i]
+        <span style=color:green;font-weight:700>if</span> potentialTarget <span style=color:#a2f;font-weight:700>in</span> seen:
+            <span style=color:green;font-weight:700>return</span> [seen[potentialTarget], i]
+        <span style=color:green;font-weight:700>else</span>:
+            seen[nums[i]] <span style=color:#666>=</span> i
+    <span style=color:#408080;font-style:italic># Assume we never reach here</span>
+    <span style=color:green;font-weight:700>return</span> []
 </code></pre></div><blockquote>
 <p><em>&ldquo;If you store the values, you can compute the combinations in one traversal. If we do &lsquo;target - current&rsquo;, we can check if we&rsquo;ve already seen one of the values. This will be O(n) run-time and O(n) space complexity since it&rsquo;s we go through nums once."</em></p>
 </blockquote>
