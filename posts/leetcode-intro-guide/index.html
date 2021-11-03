@@ -9,6 +9,7 @@
 <head>
 <title>Kelvin Koon</title>
 </head>
+<link rel="shortcut icon" type=favicon href=favicon.png>
 </html>
 <body><h1 class=home><a href=/>Kelvin Koon</a></h1>
 <div class=sub-nav>
@@ -94,24 +95,6 @@
 <h2 id=approaching-the-question>Approaching the Question</h2>
 <p>A common mistake is for the interviewee to immediately start writing code after the question is asked. It is an expectation the interviewee discusses the approach and assumptions before writing anything. I recommend finding friends who are also preparing for interviews to facilitate mock interviews. <a href=https://coderpad.io/>CoderPad</a> is a great codesharing environment for simulating interviews. It takes time to practice verbalizing your thought process during an interview.</p>
 <p>To illustrate an approach, I&rsquo;ll be going over the process using <a href=https://leetcode.com/problems/two-sum/>Two Sum</a> as an example.</p>
-<pre><code>```
-Given an array of integers nums and an integer target,
-return indices of the two numbers such that they add up to target.
-
-You may assume that each input would have exactly one solution,
-and you may not use the same element twice.
-
-You can return the answer in any order.
-
-----
-
-Example 1:
-
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Output: Because nums[0] + nums[1] == 9, we return [0, 1].
-```
-</code></pre>
 <ol>
 <li>
 <p>Read the prompt and ask questions to clarify assumptions. In particular, ask about possible input types. For instance, ask about empty strings, non-positive numbers, and edge-cases such as searching for non-existent keys in a dictionary.</p>
@@ -131,12 +114,12 @@ Output: Because nums[0] + nums[1] == 9, we return [0, 1].
 <li>
 <p>Start writing code. Explain what you are doing as you write. Verbalizing your thought process allows the interviewer to understand and help should you get stuck. You don&rsquo;t need to explain everything, just the main implementation details.</p>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>def</span> <span style=color:#00f>two_sum</span>(nums, target):
-    <span style=color:green;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(<span style=color:green>len</span>(nums)<span style=color:#666>-</span><span style=color:#666>1</span>):
-        <span style=color:green;font-weight:700>for</span> j <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(i, <span style=color:green>len</span>(nums)):
-            <span style=color:green;font-weight:700>if</span> nums[i] <span style=color:#666>+</span> nums[j] <span style=color:#666>==</span> target:
-                <span style=color:green;font-weight:700>return</span> [i, j]
-    <span style=color:#408080;font-style:italic># Assume we never reach this point</span>
-    <span style=color:green;font-weight:700>return</span> []
+   <span style=color:green;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(<span style=color:green>len</span>(nums)<span style=color:#666>-</span><span style=color:#666>1</span>):
+       <span style=color:green;font-weight:700>for</span> j <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(i, <span style=color:green>len</span>(nums)):
+           <span style=color:green;font-weight:700>if</span> nums[i] <span style=color:#666>+</span> nums[j] <span style=color:#666>==</span> target:
+               <span style=color:green;font-weight:700>return</span> [i, j]
+   <span style=color:#408080;font-style:italic># Assume we never reach this point</span>
+   <span style=color:green;font-weight:700>return</span> []
 </code></pre></div></li>
 <li>
 <p>Run the interviewer through your code with an example input. This is an opportunity to catch your own mistakes as you run through it.</p>
@@ -147,15 +130,15 @@ Output: Because nums[0] + nums[1] == 9, we return [0, 1].
 <p><em>&ldquo;The solution given is O(n^2) where n is the length of nums. Maybe we can use a hash map to store values we&rsquo;ve seen."</em></p>
 </blockquote>
 <div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>def</span> <span style=color:#00f>two_sum</span>(nums, target):
-    seen <span style=color:#666>=</span> {}
-    <span style=color:green;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(<span style=color:green>len</span>(nums)):
-        potentialTarget <span style=color:#666>=</span> target <span style=color:#666>-</span> nums[i]
-        <span style=color:green;font-weight:700>if</span> potentialTarget <span style=color:#a2f;font-weight:700>in</span> seen:
-            <span style=color:green;font-weight:700>return</span> [seen[potentialTarget], i]
-        <span style=color:green;font-weight:700>else</span>:
-            seen[nums[i]] <span style=color:#666>=</span> i
-    <span style=color:#408080;font-style:italic># Assume we never reach here</span>
-    <span style=color:green;font-weight:700>return</span> []
+   seen <span style=color:#666>=</span> {}
+   <span style=color:green;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(<span style=color:green>len</span>(nums)):
+       potentialTarget <span style=color:#666>=</span> target <span style=color:#666>-</span> nums[i]
+       <span style=color:green;font-weight:700>if</span> potentialTarget <span style=color:#a2f;font-weight:700>in</span> seen:
+           <span style=color:green;font-weight:700>return</span> [seen[potentialTarget], i]
+       <span style=color:green;font-weight:700>else</span>:
+           seen[nums[i]] <span style=color:#666>=</span> i
+   <span style=color:#408080;font-style:italic># Assume we never reach here</span>
+   <span style=color:green;font-weight:700>return</span> []
 </code></pre></div><blockquote>
 <p><em>&ldquo;If you store the values, you can compute the combinations in one traversal. If we do &lsquo;target - current&rsquo;, we can check if we&rsquo;ve already seen one of the values. This will be O(n) run-time and O(n) space complexity since it&rsquo;s we go through nums once."</em></p>
 </blockquote>
