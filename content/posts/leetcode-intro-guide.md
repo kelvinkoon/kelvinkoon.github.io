@@ -68,24 +68,6 @@ A common mistake is for the interviewee to immediately start writing code after 
 
 To illustrate an approach, I'll be going over the process using [Two Sum](https://leetcode.com/problems/two-sum/) as an example.
 
-    ```
-    Given an array of integers nums and an integer target,
-    return indices of the two numbers such that they add up to target.
-
-    You may assume that each input would have exactly one solution,
-    and you may not use the same element twice.
-
-    You can return the answer in any order.
-
-    ----
-
-    Example 1:
-
-    Input: nums = [2,7,11,15], target = 9
-    Output: [0,1]
-    Output: Because nums[0] + nums[1] == 9, we return [0, 1].
-    ```
-
 1. Read the prompt and ask questions to clarify assumptions. In particular, ask about possible input types. For instance, ask about empty strings, non-positive numbers, and edge-cases such as searching for non-existent keys in a dictionary.
     > "What should I return if an empty array is given?"
 2. Go over sample inputs and outputs. This is a good opportunity to make sure you understand what the interviewer is asking for.
@@ -95,30 +77,34 @@ To illustrate an approach, I'll be going over the process using [Two Sum](https:
 
     ```python
     def two_sum(nums, target):
-        for i in range(len(nums)-1):
-            for j in range(i, len(nums)):
-                if nums[i] + nums[j] == target:
-                    return [i, j]
-        # Assume we never reach this point
-        return []
+       for i in range(len(nums)-1):
+           for j in range(i, len(nums)):
+               if nums[i] + nums[j] == target:
+                   return [i, j]
+       # Assume we never reach this point
+       return []
     ```
 
 5. Run the interviewer through your code with an example input. This is an opportunity to catch your own mistakes as you run through it.
 6. If the interviewer asks you to optimize the solution, there's a good chance a more efficient solution exists.Think about the time / space trade-offs. Hash tables are often the first data structure I think about when asked to optimize.
+
     > _"The solution given is O(n^2) where n is the length of nums. Maybe we can use a hash map to store values we've seen."_
+
     ```python
     def two_sum(nums, target):
-        seen = {}
-        for i in range(len(nums)):
-            potentialTarget = target - nums[i]
-            if potentialTarget in seen:
-                return [seen[potentialTarget], i]
-            else:
-                seen[nums[i]] = i
-        # Assume we never reach here
-        return []
+       seen = {}
+       for i in range(len(nums)):
+           potentialTarget = target - nums[i]
+           if potentialTarget in seen:
+               return [seen[potentialTarget], i]
+           else:
+               seen[nums[i]] = i
+       # Assume we never reach here
+       return []
     ```
+
     > _"If you store the values, you can compute the combinations in one traversal. If we do 'target - current', we can check if we've already seen one of the values. This will be O(n) run-time and O(n) space complexity since it's we go through nums once."_
+
 7. You'll likely be asked to explain time and space complexity at the end. Be conscious of your complexity as you discuss the solution.
 
 During the interview, additional factors such as nerves may affect your performance. I've found keeping track of time during the interview useful, as I have a tendency to be slow in implementing solutions. As you go through more interviews, you'll figure out what works best for you and what you may need to work on.
