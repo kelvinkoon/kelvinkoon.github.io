@@ -7,9 +7,9 @@ draft: false
 
 ## Prologue
 
-UBC's Electrical and Computer Engineering department offers no shortage of advanced electives for upper year students. The vast selection includes computer architecture, power systems analysis, and even quantum computing. As someone who has too many interests, I've worried about fitting all my interests into 12 credits. Though I ended up taking more credits than needed, the opportunity to dive into these specialized areas was invaluable to exploring my interests.
+UBC's Electrical and Computer Engineering department offers no shortage of advanced electives for upper year students. No more standard time tables to restrict your coursework; your free and advanced electives can be [anyway you want it](https://www.youtube.com/watch?v=atxUuldUcfI). As someone who has too many interests, I've worried about fitting all my interests into 12 credits. Though I ended up taking more credits than needed, the opportunity to dive into these specialized areas was invaluable to exploring my interests.
 
-I'll be reviewing the advanced electives I took to provide insight to which electives may (or may not) be suitable for you. I'll also briefly touch upon electives I wish I'd taken and what I've heard from other students who've taken them. To further preface, my electives were primarily involved with Computer Engineering disciplines despite being in the ELEC program.
+I'll be reviewing the advanced electives I took to provide insight to which electives may (or may not) be suitable for you. I'll also briefly touch upon electives I wish I'd taken.
 
 ## Wishlist Electives
 
@@ -29,11 +29,11 @@ My advanced electives were heavily influenced by my internship experience. As su
 
 > Analysis, design and implementation of computer networks and their protocols. Application layer protocols, transmission control protocol (TCP), Internet protocol (IP), routing algorithms, reliable data transfer, multiple access, Ethernet.
 
-[ELEC331](https://ece.ubc.ca/courses/elec-331/) is an introduction on how the Internet works. Starting from the application layer, the course walks through each layer until reaching the bits in the physical layer.
+[ELEC331](https://ece.ubc.ca/courses/elec-331/) is an introduction on how the Internet works. Starting from the application layer, the course walks through each layer down to the bits in the physical layer.
 
-It's a bit of an Eureka moment when you understand how the Internet's infrastructure works from the moment you click a link. Concepts like how reliable TCP is built on an unreliable IP layer was insightful into understanding how the Internet works under the hood. Networking is everywhere (as seen in my other electives), and I think the course content does a sufficient job at instilling the fundamental concepts.
+It's neat seeing how the Internet works under the hood from the moment you click a link. Concepts like how reliable TCP is built on an unreliable IP layer seem like elegant solutions to keep the Internet afloat. Networking is everywhere (as seen in my other electives), and I think the course content does a sufficient job at instilling the fundamental concepts.
 
-The course is taken directly from the [Computer Networking: A Top-Down Approach](https://gaia.cs.umass.edu/kurose_ross/eighth.php) textbook. As such, there's quite a bit of memorization, unfortunately. The slidesets help alleviate this issue, but it can still be overwhelming (particularly at the two lowest layers). Furthermore, the assignments are a mixed bag. The Python programming assignments are a gentle introduction to socket programming. However, the Wireshark labs are repetitive and tedious.
+The course is taken directly from the [Computer Networking: A Top-Down Approach](https://gaia.cs.umass.edu/kurose_ross/eighth.php) textbook. As such, there's quite a bit of memorization to the assessments. The slidesets help alleviate this issue, but it can still be overwhelming (particularly at the two lowest layers). Furthermore, the assignments feature programming and report components. The Python programming assignments are a gentle introduction to socket programming. However, the Wireshark labs are repetitive and tedious when it comes to generating and analyzing packets.
 
 All in all, it's a popular elective for both ELEC and CPEN students. A fair courseload for a 4-credit course.
 
@@ -41,7 +41,13 @@ All in all, it's a popular elective for both ELEC and CPEN students. A fair cour
 
 > Security risks, threats, and vulnerabilities from technical perspectives; cryptography; software and web security; access control, assurance, accountability; usable privacy and security; engineering of secure systems; cryptocurrencies.
 
-[CPEN442](https://ece.ubc.ca/courses/cpen-442/) is an ambitious course, being the only computer security course offered at UBC.
+[CPEN442](https://ece.ubc.ca/courses/cpen-442/) attempts the ambitious task of condensing a laundry list of security concepts into 12 weeks. It is also the only computer security course offered at UBC at this time.
+
+CPEN442 does well to provide a holistic introduction to cybersecurity to where it's applicable. For instance, the cryptography lectures discuss the Diffie-Hellman key exchange and the principles behind the discrete-log problems. Finishing the lecture, you're left with insight to how TLS works. The assignments further build this point, as you work through real-world applications such as implementing a VPN or executing web exploits.
+
+The course is run as a flipped lecture. However, the pre-reading material often takes up to 2 hours since it covers so much ground. The class goes over practice questions during the lectures from the pre-reading material. Moreover, the quizzes every class mean pre-reading is more-or-less mandatory. Combined with a course project and assignments, the course was taking up to 15-20 hours per week. The assignments can also feel disconnected from the lecture (eg. you're left to your own devices to remember how to read Assembly). It's not a surprise half the class drops the course after the first class.
+
+If you want to learn more about the material, the [course website](https://blogs.ubc.ca/cpen442/) is updated every year. Previous offerings of CPEN442 have also been pro-rated to a 75% average. Although I enjoyed the course, I cannot recommend it to everyone for its extremely high workload.
 
 ### CPEN431 (Design of Distributed Software Applications)
 
@@ -51,7 +57,7 @@ All in all, it's a popular elective for both ELEC and CPEN students. A fair cour
 
 ### ELEC400M (Machine Learning Fundamentals)
 
-> Linear models, support vector machines, gradient descent methods, multilayer perceptron, backpropagation algorithm, deep neural networks, clustering and density estimation, expectation-maximization algorithm, theory of generalization, VC dimensions, bias-variance trade-off, validation methods, regularization
+> Linear models, support vector machines, gradient descent methods, multilayer perceptron, backpropagation algorithm, deep neural networks, clustering and density estimation, expectation-maximization algorithm, theory of generalization, VC dimensions, bias-variance trade-off, validation methods, regularization.
 
 [ELEC400M](https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ELEC&course=400M) is the credit-exclusive equivalent to [CPSC340 (Machine Learning and Data Mining)](https://ubc-cs.github.io/cpsc340/).
 

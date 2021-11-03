@@ -78,7 +78,7 @@ To illustrate an approach, I'll be going over the process using [Two Sum](https:
     ```python
     def two_sum(nums, target):
        for i in range(len(nums)-1):
-           for j in range(i, len(nums)):
+           for j in range(i+1, len(nums)):
                if nums[i] + nums[j] == target:
                    return [i, j]
        # Assume we never reach this point
@@ -103,7 +103,7 @@ To illustrate an approach, I'll be going over the process using [Two Sum](https:
        return []
     ```
 
-    > _"If you store the values, you can compute the combinations in one traversal. If we do 'target - current', we can check if we've already seen one of the values. This will be O(n) run-time and O(n) space complexity since it's we go through nums once."_
+    > _"If you store the values, you can compute the combinations in one traversal. If we do 'target - current', we can check if we've already seen one of the values. This will be O(n) run-time and O(n) space complexity since it'll go through the nums array once."_
 
 7. You'll likely be asked to explain time and space complexity at the end. Be conscious of your complexity as you discuss the solution.
 
