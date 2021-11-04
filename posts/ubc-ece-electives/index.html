@@ -23,7 +23,7 @@
 <span class=header>An ECE Electives Review</span>
 </h1>
 <p class=post-detail-date>Oct 24, 2021
-· 12 min read</p>
+· 13 min read</p>
 <div class=post-tags>
 [
 <a href=https://kelvinkoon.github.io/tags/ubc>ubc</a>
@@ -87,7 +87,7 @@
 <blockquote>
 <p>Communications, processes, naming, synchronization, consistency and replication, fault tolerance, object-based middleware, and security technologies for distributed applications.</p>
 </blockquote>
-<p><a href=https://ece.ubc.ca/courses/cpen-431/>CPEN431</a> tackles building robust and performant distributed systems. In essence, the course is about how servers can work together reliably since computer teamwork makes the computer dream work. The course is the ECE equivalent to <a href="https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=416">CPSC416</a>.</p>
+<p><a href=https://ece.ubc.ca/courses/cpen-431/>CPEN431</a> tackles building robust and performant distributed systems. In essence, the course is about how servers can work together reliably since computer teamwork makes the computer dream work. The course is the ECE equivalent to <a href="https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=416">CPSC416</a>. Do note, I did not fulfill all the prerequisites (missing CPEN331 and CPEN221), but I was able to enroll after registering on the waitlist.</p>
 <p>CPEN431 was a bit different for my semester due to a change in the instructor, though many core components remained the same. The course was taught in Go instead of Java, which was a first in the course&rsquo;s history (to my knowledge). The course also featured a report component where teams had to design a distributed system to ensure certain metrics were met. Using Go was a welcome change, but the report requirements were a bit open-ended for my liking.</p>
 <p>The majority of the course is spent designing and implementing a distributed key-value store. The project was split into three milestones: bootstrapping the system, implementing fault-tolerance, and scaling performance. Along the way, teams learned about concepts such as <a href=https://en.wikipedia.org/wiki/Consistent_hashing>consistent hashing</a>, deploying to GCP using Docker, and various strategies to deal with node failures (eg. replication). The instructor left the project implementation open-ended to let teams determine the trade-offs in reliability and performance, which can be a good or bad thing depending on your expectations.</p>
 <p>The course also put a heavy emphasis on academic papers, which is no surprise given the field&rsquo;s rich history. Papers such as <a href=https://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf>Chord</a> and <a href=https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf>DynamoDB</a> could give teams direction on their project design. Other memorable papers include <a href=https://bitcoin.org/bitcoin.pdf>Bitcoin</a>, <a href=https://lamport.azurewebsites.net/pubs/time-clocks.pdf>Lamport Clocks</a>, and the <a href=https://cs.nyu.edu/~mwalfish/papers/falcon-sosp11.pdf>FALCON spy network</a>. I certainly did not understand every paper, but it was interesting having an undergrad course assign academia to read.</p>
