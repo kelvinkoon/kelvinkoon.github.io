@@ -54,7 +54,7 @@ If you want to learn more about the material, the [course website](https://blogs
 
 > Communications, processes, naming, synchronization, consistency and replication, fault tolerance, object-based middleware, and security technologies for distributed applications.
 
-[CPEN431](https://ece.ubc.ca/courses/cpen-431/) tackles building robust and performant distributed systems. In essence, the course is about how servers can work together reliably since computer teamwork makes the computer dream work. The course is the ECE equivalent to [CPSC416](https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=416).
+[CPEN431](https://ece.ubc.ca/courses/cpen-431/) tackles building robust and performant distributed systems. In essence, the course is about how servers can work together reliably since computer teamwork makes the computer dream work. The course is the ECE equivalent to [CPSC416](https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=416). Do note, I did not fulfill all the prerequisites (missing CPEN331 and CPEN221), but I was able to enroll after registering on the waitlist.
 
 CPEN431 was a bit different for my semester due to a change in the instructor, though many core components remained the same. The course was taught in Go instead of Java, which was a first in the course's history (to my knowledge). The course also featured a report component where teams had to design a distributed system to ensure certain metrics were met. Using Go was a welcome change, but the report requirements were a bit open-ended for my liking.
 
