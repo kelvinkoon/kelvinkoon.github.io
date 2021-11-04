@@ -69,10 +69,10 @@ A common mistake is for the interviewee to immediately start writing code after 
 To illustrate an approach, I'll be going over the process using [Two Sum](https://leetcode.com/problems/two-sum/) as an example.
 
 1. Read the prompt and ask questions to clarify assumptions. In particular, ask about possible input types. For instance, ask about empty strings, non-positive numbers, and edge-cases such as searching for non-existent keys in a dictionary.
-    > "What should I return if an empty array is given?"
+    > _"What should I return if an empty array is given?"_
 2. Go over sample inputs and outputs. This is a good opportunity to make sure you understand what the interviewer is asking for.
 3. Explain your thought process to the interviewer. If you're unsure, **it's okay to ask the interviewer for hints on where to start**. You can start with a "brute-force" solution and optimize through the interview.
-    > "It is possible to generate every single combination using two loops to find the correct combination."
+    > _"It is possible to generate every single combination using two loops to find the correct combination."_
 4. Start writing code. Explain what you are doing as you write. Verbalizing your thought process allows the interviewer to understand and help should you get stuck. You don't need to explain everything, just the main implementation details.
 
     ```python
