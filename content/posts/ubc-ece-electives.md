@@ -1,6 +1,6 @@
 ---
 title: "An ECE Electives Review"
-date: 2021-10-24
+date: 2021-11-04
 tags: ["ubc", "academic"]
 draft: false
 ---
@@ -15,7 +15,7 @@ I'll be going over the advanced electives I took to hopefully help you decide wh
 
 You'd think I would've taken all the courses I wanted after spending 6 years at UBC. Unfortunately, workload and scheduling issues meant I decided to pursue other electives.
 
-The electives listed are ones I would have taken given more semesters. I've also included details I've heard from previous students.
+The electives listed are ones I would have taken given more semesters. I've also included details heard from previous students.
 
 -   [CPEN411 (Computer Architecture)](https://ece.ubc.ca/courses/cpen-411/): The prominence of hardware for graphics and ML drew my interest in the course. Seemingly heavy workload with high expectations, which is on par with digital hardware courses here (eg. CPEN211).
 -   [CPEN432 (Real-Time System Design)](https://ece.ubc.ca/courses/cpen-432/): Embedded courses aren't plentiful for ELEC and the opportunity to work with [FreeRTOS](https://www.freertos.org/) is neat. Without [CPEN331 (Operating Systems)](https://ece.ubc.ca/courses/cpen-331/) or [MATH220 (Mathematical Proof)](https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=220) credits, I felt underprepared (especially with using proofs for scheduling theory). Previous course offerings featured a heavy courseload, but curriculum and instructor changes have tried to address this.
