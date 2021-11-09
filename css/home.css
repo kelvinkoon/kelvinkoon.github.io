@@ -157,6 +157,9 @@ body {
 .post-quote {
     font-style: italic;
     margin-bottom: 20px;
+    margin-left: 0px;
+    padding-left: 15px;
+    border-left: 3px solid #087b9c;
 }
 
 .post-date {
@@ -184,7 +187,6 @@ body {
 .post-date p {
     font-family: "Noto Sans", sans-serif;
     font-size: 12px;
-    font-weight: bold;
 }
 
 .post-tags {
@@ -196,7 +198,6 @@ body {
 .post-tags a {
     font-family: "Noto Sans", sans-serif;
     font-size: 13px;
-    font-weight: bold;
     border-bottom: none;
     color: rgba(34, 36, 39, 0.6);
 }
@@ -204,7 +205,6 @@ body {
 .post-tags a:hover {
     font-family: "Noto Sans", sans-serif;
     font-size: 13px;
-    font-weight: bold;
     border-bottom: none;
 }
 
@@ -315,10 +315,4 @@ hr {
     border: none;
     margin-top: 35px;
     width: 25%;
-}
-
-code {
-    /* background-color: rgba(220, 220, 220, 0.3);
-    display: block;
-    padding: 20px; */
 }
