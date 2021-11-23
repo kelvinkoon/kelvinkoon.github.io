@@ -1,7 +1,7 @@
 ---
 title: "LeetCode Intro Guide"
 date: 2021-08-14
-tags: ["leetcode", "interviews", "career"]
+tags: ["leetcode", "interviews"]
 draft: false
 ---
 
