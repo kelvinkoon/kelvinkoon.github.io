@@ -6,4 +6,4 @@ The site is deployed at [here](https://kelvinkoon.dev/).
 
 # Set-Up
 
-Run `hugo server -D --noHTTPCache`.
+Run `./run_server.sh`, which runs `hugo server -D --noHTTPCache`.
