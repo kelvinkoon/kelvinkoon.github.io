@@ -11,7 +11,7 @@
 
 - name: babiri.net
   github: https://github.com/kelvinkoon/babiri_v1
-  desc: Competitive Pokémon stats app featuring 100,000+ users
+  desc: Competitive Pokémon stats app featuring 100,000+ visitors
   links:
       - link_name: code
         link: https://github.com/UBC-Thunderbots/Software
