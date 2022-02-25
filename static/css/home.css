@@ -12,6 +12,12 @@ body {
     margin: 12px;
 }
 
+img {
+    max-width: 600px;
+    width: 85%;
+    margin: 12px;
+}
+
 .menu-item {
     font-size: 17px;
     color: #087b9c;
@@ -60,7 +66,7 @@ body {
 }
 
 .header {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 25px;
     background: linear-gradient(
         180deg,
@@ -76,7 +82,7 @@ body {
 }
 
 .job-name a {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 19px;
     font-weight: bold;
     color: #087b9c;
@@ -85,7 +91,7 @@ body {
 }
 
 .job-name a:hover {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 19px;
     font-weight: bold;
     color: #8bc5cd;
@@ -94,18 +100,18 @@ body {
 }
 
 .job-date {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     text-align: right;
 }
 
 .job-title {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
 }
 
 .job-team {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     color: rgba(34, 36, 39, 0.6);
 }
@@ -117,7 +123,7 @@ body {
 }
 
 .project-name a {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 19px;
     font-weight: bold;
     color: #087b9c;
@@ -126,7 +132,7 @@ body {
 }
 
 .project-name a:hover {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 19px;
     font-weight: bold;
     color: #8bc5cd;
@@ -143,7 +149,7 @@ body {
 }
 
 .project-desc {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
 }
 
@@ -167,7 +173,7 @@ body {
 }
 
 .post-title a {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 21px;
     font-weight: bold;
     color: #087b9c;
@@ -176,7 +182,7 @@ body {
 }
 
 .post-title a:hover {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 21px;
     font-weight: bold;
     color: #e64a6a;
@@ -185,25 +191,25 @@ body {
 }
 
 .post-date p {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 12px;
 }
 
 .post-tags {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 12px;
     margin-top: -8px;
 }
 
 .post-tags a {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 13px;
     border-bottom: none;
     color: rgba(34, 36, 39, 0.6);
 }
 
 .post-tags a:hover {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 13px;
     border-bottom: none;
 }
@@ -223,7 +229,7 @@ body {
 }
 
 .toc-header {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 25px;
     background: linear-gradient(
         180deg,
@@ -250,26 +256,33 @@ body {
     margin-left: 3px;
 }
 
+.highlight {
+    background-color: rgba(220, 220, 220, 0.3);
+    padding: 5px 2px 3px 5px;
+    border-radius: 8px;
+}
+
 h1 {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 h2 {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 h3 {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 p {
-    font-family: "Noto Sans", sans-serif;
-    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
 }
 
 li {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     margin-top: 10px;
+    font-size: 15px;
 }
 
 li > a {
@@ -284,7 +297,7 @@ li > a:hover {
 }
 
 a {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     color: #087b9c;
     text-decoration: none;
@@ -293,7 +306,7 @@ a {
 }
 
 a:hover {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     color: #e64a6a;
     border-bottom: 2px solid #e64a6a;
@@ -307,6 +320,8 @@ blockquote {
 
 blockquote p {
     display: inline;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
 }
 
 hr {
