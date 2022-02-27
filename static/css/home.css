@@ -101,18 +101,18 @@ img {
 
 .job-date {
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     text-align: right;
 }
 
 .job-title {
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .job-team {
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     color: rgba(34, 36, 39, 0.6);
 }
 
@@ -150,7 +150,7 @@ img {
 
 .project-desc {
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .posts-info {
@@ -298,7 +298,7 @@ li > a:hover {
 
 a {
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     color: #087b9c;
     text-decoration: none;
     border-bottom: 2px solid #087b9c;
@@ -307,7 +307,7 @@ a {
 
 a:hover {
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     color: #e64a6a;
     border-bottom: 2px solid #e64a6a;
 }
