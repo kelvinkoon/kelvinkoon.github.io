@@ -1,6 +1,6 @@
 ---
 title: "Building babiri.net"
-date: 2022-02-22
+date: 2022-02-26
 tags: ["project", "babiri", "full-stack"]
 draft: false
 ---
