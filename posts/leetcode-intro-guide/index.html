@@ -7,167 +7,69 @@
 <link rel=stylesheet href=/css/syntax.css type=text/css media=all>
 <html>
 <head>
-<title>Kelvin Koon</title>
-</head>
-<link rel="shortcut icon" type=favicon href=favicon.png>
-</html>
-<body><h1 class=home><a href=/>Kelvin Koon</a></h1>
-<div class=sub-nav>
+<title>Kelvin Koon</title></head><link rel="shortcut icon" type=favicon href=favicon.png>
+</html><body><h1 class=home><a href=/>Kelvin Koon</a></h1><div class=sub-nav>
 <a href=/posts class=menu-item>/blog</a>
 <a href=/resume.pdf target=_blank class=menu-item>/resume</a>
 <a href=https://github.com/kelvinkoon target=_blank class=menu-item>/github</a>
-</div>
-<div id=content>
+</div><div id=content>
 <section id=main>
 <h1>
 <span class=header>LeetCode Intro Guide</span>
-</h1>
-<p class=post-detail-date>Aug 14, 2021
-· 13 min read</p>
-<div class=post-tags>
+</h1><p class=post-detail-date>Aug 14, 2021
+· 13 min read</p><div class=post-tags>
 [
 <a href=https://kelvinkoon.github.io/tags/leetcode>leetcode</a>
 ,
 <a href=https://kelvinkoon.github.io/tags/interviews>interviews</a>
 ]
-</div>
-<h2>
+</div><h2>
 <span class=toc-header>Table of Contents</span>
-</h2>
-<div class=toc>
+</h2><div class=toc>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#prologue>Prologue</a></li>
-<li><a href=#what-is-leetcode>What is LeetCode?</a></li>
-<li><a href=#reasons-to-do-lc>Reasons to do LC</a></li>
-<li><a href=#preparation-resources>Preparation Resources</a></li>
-<li><a href=#dsa-preparation>DS/A Preparation</a>
+<li><a href=#prologue>Prologue</a></li><li><a href=#what-is-leetcode>What is LeetCode?</a></li><li><a href=#reasons-to-do-lc>Reasons to do LC</a></li><li><a href=#preparation-resources>Preparation Resources</a></li><li><a href=#dsa-preparation>DS/A Preparation</a>
 <ul>
-<li><a href=#paid-resources>Paid Resources</a></li>
-<li><a href=#additional-resources>Additional Resources</a></li>
-</ul>
-</li>
-<li><a href=#approaching-the-question>Approaching the Question</a></li>
-<li><a href=#building-your-understanding>Building Your Understanding</a></li>
-<li><a href=#parting-words>Parting Words</a></li>
-</ul>
-</nav>
-</div>
-<div>
+<li><a href=#paid-resources>Paid Resources</a></li><li><a href=#additional-resources>Additional Resources</a></li></ul></li><li><a href=#approaching-the-question>Approaching the Question</a></li><li><a href=#building-your-understanding>Building Your Understanding</a></li><li><a href=#parting-words>Parting Words</a></li></ul></nav></div><div>
 <article id=content>
-<h2 id=prologue>Prologue</h2>
-<p>The guide you are reading assumes you have taken <a href="https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=259">CPSC259</a> if you are in ELEC or <a href="https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=221">CPSC221</a> if you are in CPEN / CPSC, which are the introductory Data Structures and Algorithms (DS/A) courses offered at UBC. Although CPSC259 is less in-depth compared to CPSC221, the deficiencies can be remedied through practice. Even if you have not taken either course, the article can still provide take-aways to the current state of interviews.</p>
-<p>The interview process may also include (but not limited to) take-home assignments, system design interviews, and behavioural rounds. This post will primarily focus on DS/A-style interviews since it&rsquo;s the most prevalent.</p>
-<h2 id=what-is-leetcode>What is LeetCode?</h2>
-<p><a href=https://leetcode.com/>LeetCode</a> (LC) is a website for software interview preparation focusing on DS/A. There are countless questions available for practice, spanning topics from Trees to Greedy Algorithms. Some topics you may have learned in classes, others you may not have. LC allows you to run your solution against their test-cases in any programming language. Python, C++, and Java are particularly common languages for tackling interviews, with Python being particularly popular for its succinct syntax.</p>
-<h2 id=reasons-to-do-lc>Reasons to do LC</h2>
-<p><strong>If you are aiming for large tech companies, you will have to invest time to practice DS/A questions.</strong> LC is <a href="https://twitter.com/mxcl/status/608682016205344768?lang=en">notorious</a> for being mandatory when interviewing at companies such as Amazon, Microsoft, Google, etc. The technical interviews will almost always consist of questions akin to LC. They may be conducted on a shared development environment online or on a whiteboard for in-person on-site interviews.</p>
-<p>For many, DS/A interviews are not representative of the day-to-day responsibilities of a software engineer. You likely won&rsquo;t have to implement a LRU Cache or understand how A* pathfinding works for what you work on. That being said, practicing DS/A has improved my ability to approach and reason about problem-solving. Parts of the process such as generating good test-cases are fundamental to writing robust programs.</p>
-<p><strong>If you are not aiming for large tech companies, you will likely not have to invest as much time practicing DS/A questions.</strong> Local companies may choose to run through your resume or domain-specific knowledge. For instance, a networking company may ask about UDP vs TCP. What you get asked is very dependent on the company, team, and position. Be warned, DS/A questions may still be found at smaller companies. In particular, if you are looking for your first internship, I would not stress about LC beyond what&rsquo;s been taught in your coursework.</p>
-<p>LC is primarily aimed at Software Engineering roles. Other roles such as Firmware or Systems Engineering may be asked fewer LC questions. Preference may be given to take-home assignments or questions closer ground to their work.</p>
-<h2 id=preparation-resources>Preparation Resources</h2>
-<p>Coming from CPSC259 / CPSC221, you should be acquainted with the concept of time complexity (ie. Big O notation). However, you may not be as familiar with space complexity (especially in the case of CPSC259).</p>
-<p>It is important to be familiar with the time / space complexity of common data structures. Asking yourself why one data structure has a specific property can help develop the time / space complexity intuition. Time and space complexity are often trade-offs. You may be able to run your solution in O(n^2) time and O(1) space, but the interviewer may want a lower time complexity. In many cases, you&rsquo;ll find the solution can be converted to an O(n) time and O(n) space complexity through using additional data structures such as a hash map.</p>
-<p>For a refresher in time / space complexity, I highly recommend this <a href="https://www.youtube.com/watch?v=D6xkbGLQesk">video</a> and this <a href=https://www.freecodecamp.org/news/10-common-data-structures-explained-with-videos-exercises-aaff6c06fb2b/>guide</a>. This <a href=https://www.bigocheatsheet.com/>cheat sheet</a> has also been helpful for many. As you practice, the time and space complexity of data structures will become more familiar.</p>
-<h2 id=dsa-preparation>DS/A Preparation</h2>
-<p>A common remark among students is which questions should one prioritize. LC is already divided into DS/A categories, so one approach may be to work through your weakest category until you feel comfortable with the questions provided. Anecdotally, I did not study any graph questions during my internship search since I felt the investment did not justify the likelihood I&rsquo;d receive one. Similarly, friends have opted to not study Dynamic Programming since the company hadn&rsquo;t historically asked them. Do what you think is best for what you want to achieve.</p>
-<p>For a holistic overview of interview questions, I highly recommend reading this <a href=https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions>post</a>. The questions provided encompass many frequently occuring topics or build to more complex topics. I would argue the provided list is generally sufficient for most internship / full-time interviews. I&rsquo;ve also created a <a href="https://docs.google.com/spreadsheets/d/1O6lu-27mkdEfQAFfMB43vcqZRF57ygtJO2tCDw2ZQaY/edit?usp=sharing">Google Sheet</a> to keep track of your own progress.</p>
-<p>If there is limited time prior to your interview, I would recommend prioritizing Arrays, Strings, Trees, and Linked Lists. The aforementioned topics are fairly common in interviews, particularly:</p>
-<ul>
-<li>Array: <a href=https://leetcode.com/problems/two-sum/>Two Sum</a>, <a href=https://leetcode.com/problems/best-time-to-buy-and-sell-stock/>Best Time to Buy and Sell Stock</a>, <a href=https://leetcode.com/problems/contains-duplicate/>Contains Duplicate</a></li>
-<li>String: <a href=https://leetcode.com/problems/valid-palindrome/>Valid Palindrome</a>, <a href=https://leetcode.com/problems/valid-parentheses/>Valid Parentheses</a></li>
-<li>Tree: <a href=https://leetcode.com/problems/same-tree/>Same Tree</a>, <a href=https://leetcode.com/problems/maximum-depth-of-binary-tree/>Maximum Depth of a Binary Tree</a>, <a href=https://leetcode.com/problems/kth-smallest-element-in-a-bst/>Kth Smallest Element in a BST</a></li>
-<li>Linked List: <a href=https://leetcode.com/problems/reverse-linked-list/>Reverse Linked List</a>, <a href=https://leetcode.com/problems/merge-two-sorted-lists/>Merge Two Sorted Lists</a>, <a href=https://leetcode.com/problems/linked-list-cycle/>Linked List Cycle</a></li>
-</ul>
-<p>Likewise, it&rsquo;s okay to be less familiar with certain question categories. For instance, Dynamic Programming questions will likely show up less than Array questions due to their difficulty. For internships, you will likely not be asked Hard questions, but it doesn&rsquo;t hurt to practice them.</p>
-<h3 id=paid-resources>Paid Resources</h3>
-<p>LeetCode Premium is the paid service offered which will provide you with questions sorted by company interview frequency (eg. Top 50 Questions asked by Microsoft). In my experience, the accuracy varies but Premium also unlocks exclusive questions which may be useful in preparation. Furthermore, Premium provides you with mock interviews based on company-specific questions. I&rsquo;ve personally found LC Premium useful but not necessary given the subscription price. If you have a group willing to split the cost, it may be worth looking into.</p>
-<p>There are paid video services such as InterviewCake to provide explanations alongside problems. Having tried one of these services, I do not think they are worth the subscription for similar reasons as LC Premium. The quality of services is also widely varied; if you intend on purchasing a subscription, do your homework on the reviews. The &ldquo;Discuss&rdquo; tab on LC is often sufficient for breaking down questions.</p>
-<h3 id=additional-resources>Additional Resources</h3>
-<p>The following are commonly cited resources for interview preparation.</p>
-<ul>
-<li><a href=https://www.crackingthecodinginterview.com/>Cracking the Coding Interview</a></li>
-<li><a href=https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/video-lectures/>MIT&rsquo;s Introduction to Algorithms Lecture Series</a></li>
-<li><a href=https://www.hackerrank.com/>HackerRank</a></li>
-</ul>
-<h2 id=approaching-the-question>Approaching the Question</h2>
-<p>A common mistake is for the interviewee to immediately start writing code after the question is asked. It is an expectation the interviewee discusses the approach and assumptions before writing anything. I recommend finding friends who are also preparing for interviews to facilitate mock interviews. <a href=https://coderpad.io/>CoderPad</a> is a great codesharing environment for simulating interviews. It takes time to practice verbalizing your thought process during an interview.</p>
-<p>To illustrate an approach, I&rsquo;ll be going over the process using <a href=https://leetcode.com/problems/two-sum/>Two Sum</a> as an example.</p>
-<ol>
+<h2 id=prologue>Prologue</h2><p>The guide you are reading assumes you have taken <a href="https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=259">CPSC259</a> if you are in ELEC or <a href="https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=221">CPSC221</a> if you are in CPEN / CPSC, which are the introductory Data Structures and Algorithms (DS/A) courses offered at UBC. Although CPSC259 is less in-depth compared to CPSC221, the deficiencies can be remedied through practice. Even if you have not taken either course, the article can still provide take-aways to the current state of interviews.</p><p>The interview process may also include (but not limited to) take-home assignments, system design interviews, and behavioural rounds. This post will primarily focus on DS/A-style interviews since it&rsquo;s the most prevalent.</p><h2 id=what-is-leetcode>What is LeetCode?</h2><p><a href=https://leetcode.com/>LeetCode</a> (LC) is a website for software interview preparation focusing on DS/A. There are countless questions available for practice, spanning topics from Trees to Greedy Algorithms. Some topics you may have learned in classes, others you may not have. LC allows you to run your solution against their test-cases in any programming language. Python, C++, and Java are particularly common languages for tackling interviews, with Python being particularly popular for its succinct syntax.</p><h2 id=reasons-to-do-lc>Reasons to do LC</h2><p><strong>If you are aiming for large tech companies, you will have to invest time to practice DS/A questions.</strong> LC is <a href="https://twitter.com/mxcl/status/608682016205344768?lang=en">notorious</a> for being mandatory when interviewing at companies such as Amazon, Microsoft, Google, etc. The technical interviews will almost always consist of questions akin to LC. They may be conducted on a shared development environment online or on a whiteboard for in-person on-site interviews.</p><p>For many, DS/A interviews are not representative of the day-to-day responsibilities of a software engineer. You likely won&rsquo;t have to implement a LRU Cache or understand how A* pathfinding works for what you work on. That being said, practicing DS/A has improved my ability to approach and reason about problem-solving. Parts of the process such as generating good test-cases are fundamental to writing robust programs.</p><p><strong>If you are not aiming for large tech companies, you will likely not have to invest as much time practicing DS/A questions.</strong> Local companies may choose to run through your resume or domain-specific knowledge. For instance, a networking company may ask about UDP vs TCP. What you get asked is very dependent on the company, team, and position. Be warned, DS/A questions may still be found at smaller companies. In particular, if you are looking for your first internship, I would not stress about LC beyond what&rsquo;s been taught in your coursework.</p><p>LC is primarily aimed at Software Engineering roles. Other roles such as Firmware or Systems Engineering may be asked fewer LC questions. Preference may be given to take-home assignments or questions closer ground to their work.</p><h2 id=preparation-resources>Preparation Resources</h2><p>Coming from CPSC259 / CPSC221, you should be acquainted with the concept of time complexity (ie. Big O notation). However, you may not be as familiar with space complexity (especially in the case of CPSC259).</p><p>It is important to be familiar with the time / space complexity of common data structures. Asking yourself why one data structure has a specific property can help develop the time / space complexity intuition. Time and space complexity are often trade-offs. You may be able to run your solution in O(n^2) time and O(1) space, but the interviewer may want a lower time complexity. In many cases, you&rsquo;ll find the solution can be converted to an O(n) time and O(n) space complexity through using additional data structures such as a hash map.</p><p>For a refresher in time / space complexity, I highly recommend this <a href="https://www.youtube.com/watch?v=D6xkbGLQesk">video</a> and this <a href=https://www.freecodecamp.org/news/10-common-data-structures-explained-with-videos-exercises-aaff6c06fb2b/>guide</a>. This <a href=https://www.bigocheatsheet.com/>cheat sheet</a> has also been helpful for many. As you practice, the time and space complexity of data structures will become more familiar.</p><h2 id=dsa-preparation>DS/A Preparation</h2><p>A common remark among students is which questions should one prioritize. LC is already divided into DS/A categories, so one approach may be to work through your weakest category until you feel comfortable with the questions provided. Anecdotally, I did not study any graph questions during my internship search since I felt the investment did not justify the likelihood I&rsquo;d receive one. Similarly, friends have opted to not study Dynamic Programming since the company hadn&rsquo;t historically asked them. Do what you think is best for what you want to achieve.</p><p>For a holistic overview of interview questions, I highly recommend reading this <a href=https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions>post</a>. The questions provided encompass many frequently occuring topics or build to more complex topics. I would argue the provided list is generally sufficient for most internship / full-time interviews. I&rsquo;ve also created a <a href="https://docs.google.com/spreadsheets/d/1O6lu-27mkdEfQAFfMB43vcqZRF57ygtJO2tCDw2ZQaY/edit?usp=sharing">Google Sheet</a> to keep track of your own progress.</p><p>If there is limited time prior to your interview, I would recommend prioritizing Arrays, Strings, Trees, and Linked Lists. The aforementioned topics are fairly common in interviews, particularly:</p><ul>
+<li>Array: <a href=https://leetcode.com/problems/two-sum/>Two Sum</a>, <a href=https://leetcode.com/problems/best-time-to-buy-and-sell-stock/>Best Time to Buy and Sell Stock</a>, <a href=https://leetcode.com/problems/contains-duplicate/>Contains Duplicate</a></li><li>String: <a href=https://leetcode.com/problems/valid-palindrome/>Valid Palindrome</a>, <a href=https://leetcode.com/problems/valid-parentheses/>Valid Parentheses</a></li><li>Tree: <a href=https://leetcode.com/problems/same-tree/>Same Tree</a>, <a href=https://leetcode.com/problems/maximum-depth-of-binary-tree/>Maximum Depth of a Binary Tree</a>, <a href=https://leetcode.com/problems/kth-smallest-element-in-a-bst/>Kth Smallest Element in a BST</a></li><li>Linked List: <a href=https://leetcode.com/problems/reverse-linked-list/>Reverse Linked List</a>, <a href=https://leetcode.com/problems/merge-two-sorted-lists/>Merge Two Sorted Lists</a>, <a href=https://leetcode.com/problems/linked-list-cycle/>Linked List Cycle</a></li></ul><p>Likewise, it&rsquo;s okay to be less familiar with certain question categories. For instance, Dynamic Programming questions will likely show up less than Array questions due to their difficulty. For internships, you will likely not be asked Hard questions, but it doesn&rsquo;t hurt to practice them.</p><h3 id=paid-resources>Paid Resources</h3><p>LeetCode Premium is the paid service offered which will provide you with questions sorted by company interview frequency (eg. Top 50 Questions asked by Microsoft). In my experience, the accuracy varies but Premium also unlocks exclusive questions which may be useful in preparation. Furthermore, Premium provides you with mock interviews based on company-specific questions. I&rsquo;ve personally found LC Premium useful but not necessary given the subscription price. If you have a group willing to split the cost, it may be worth looking into.</p><p>There are paid video services such as InterviewCake to provide explanations alongside problems. Having tried one of these services, I do not think they are worth the subscription for similar reasons as LC Premium. The quality of services is also widely varied; if you intend on purchasing a subscription, do your homework on the reviews. The &ldquo;Discuss&rdquo; tab on LC is often sufficient for breaking down questions.</p><h3 id=additional-resources>Additional Resources</h3><p>The following are commonly cited resources for interview preparation.</p><ul>
+<li><a href=https://www.crackingthecodinginterview.com/>Cracking the Coding Interview</a></li><li><a href=https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/video-lectures/>MIT&rsquo;s Introduction to Algorithms Lecture Series</a></li><li><a href=https://www.hackerrank.com/>HackerRank</a></li></ul><h2 id=approaching-the-question>Approaching the Question</h2><p>A common mistake is for the interviewee to immediately start writing code after the question is asked. It is an expectation the interviewee discusses the approach and assumptions before writing anything. I recommend finding friends who are also preparing for interviews to facilitate mock interviews. <a href=https://coderpad.io/>CoderPad</a> is a great codesharing environment for simulating interviews. It takes time to practice verbalizing your thought process during an interview.</p><p>To illustrate an approach, I&rsquo;ll be going over the process using <a href=https://leetcode.com/problems/two-sum/>Two Sum</a> as an example.</p><ol>
 <li>
-<p><strong>Read the prompt and ask questions to clarify assumptions.</strong> In particular, ask about possible input types. For instance, ask about empty strings, non-positive numbers, and edge-cases such as searching for non-existent keys in a dictionary.</p>
-<blockquote>
-<p><em>&ldquo;What should I return if an empty array is given?"</em></p>
-</blockquote>
-</li>
-<li>
-<p>Go over sample inputs and outputs. This is a good opportunity to make sure you understand what the interviewer is asking for.</p>
-</li>
-<li>
-<p>Explain your thought process to the interviewer. If you&rsquo;re unsure, <strong>it&rsquo;s okay to ask the interviewer for hints on where to start</strong>. You can start with a &ldquo;brute-force&rdquo; solution and optimize through the interview.</p>
-<blockquote>
-<p><em>&ldquo;It is possible to generate every single combination using two loops to find the correct combination."</em></p>
-</blockquote>
-</li>
-<li>
-<p>Start writing code. Explain what you are doing as you write. Verbalizing your thought process allows the interviewer to understand and help should you get stuck. You don&rsquo;t need to explain everything, just the main implementation details.</p>
-<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>def</span> <span style=color:#00f>two_sum</span>(nums, target):
-   <span style=color:green;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(<span style=color:green>len</span>(nums)<span style=color:#666>-</span><span style=color:#666>1</span>):
-       <span style=color:green;font-weight:700>for</span> j <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(i<span style=color:#666>+</span><span style=color:#666>1</span>, <span style=color:green>len</span>(nums)):
-           <span style=color:green;font-weight:700>if</span> nums[i] <span style=color:#666>+</span> nums[j] <span style=color:#666>==</span> target:
-               <span style=color:green;font-weight:700>return</span> [i, j]
-   <span style=color:#408080;font-style:italic># Assume we never reach this point</span>
-   <span style=color:green;font-weight:700>return</span> []
-</code></pre></div></li>
-<li>
-<p>Run the interviewer through your code with an example input. This is an opportunity to catch your own mistakes as you run through it.</p>
-</li>
-<li>
-<p>If the interviewer asks you to optimize the solution, there&rsquo;s a good chance a more efficient solution exists.Think about the time / space trade-offs. Hash tables are often the first data structure I think about when asked to optimize.</p>
-<blockquote>
-<p><em>&ldquo;The solution given is O(n^2) where n is the length of nums. Maybe we can use a hash map to store values we&rsquo;ve seen."</em></p>
-</blockquote>
-<div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:green;font-weight:700>def</span> <span style=color:#00f>two_sum</span>(nums, target):
-   seen <span style=color:#666>=</span> {}
-   <span style=color:green;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(<span style=color:green>len</span>(nums)):
-       potentialTarget <span style=color:#666>=</span> target <span style=color:#666>-</span> nums[i]
-       <span style=color:green;font-weight:700>if</span> potentialTarget <span style=color:#a2f;font-weight:700>in</span> seen:
-           <span style=color:green;font-weight:700>return</span> [seen[potentialTarget], i]
-       <span style=color:green;font-weight:700>else</span>:
-           seen[nums[i]] <span style=color:#666>=</span> i
-   <span style=color:#408080;font-style:italic># Assume we never reach here</span>
-   <span style=color:green;font-weight:700>return</span> []
-</code></pre></div><blockquote>
-<p><em>&ldquo;If you store the values, you can compute the combinations in one traversal. If we do &lsquo;target - current&rsquo;, we can check if we&rsquo;ve already seen one of the values. This will be O(n) run-time and O(n) space complexity since it&rsquo;ll go through the nums array once."</em></p>
-</blockquote>
-</li>
-<li>
-<p>You&rsquo;ll likely be asked to explain time and space complexity at the end. Be conscious of your complexity as you discuss the solution.</p>
-</li>
-</ol>
-<p>During the interview, additional factors such as nerves may affect your performance. I&rsquo;ve found keeping track of time during the interview useful, as I have a tendency to be slow in implementing solutions. As you go through more interviews, you&rsquo;ll figure out what works best for you and what you may need to work on.</p>
-<h2 id=building-your-understanding>Building Your Understanding</h2>
-<p>LC has a Discuss tab featuring solutions from other users. Often, there are esoteric one-liner or uncommented solutions that are unhelpful to those beginning the problem. I recommend attempting each question for a period of time before looking at solutions for hints (eg. 15 min for Easy, 45 min for Medium). This allows you to keep moving forwards in your practice. Upon looking at the solution, give yourself time to continue implementing your solution. It is also important to revisit some of the problems you&rsquo;ve previously completed after a certain time to keep yourself practiced. You&rsquo;ll learn the most from implementing solutions without outside references or help.</p>
-<p>If you&rsquo;re looking for video resources, I recommend <a href=https://www.youtube.com/c/BackToBackSWE/videos>BackToBackSWE</a> for LC question walkthroughs. Many channels provide walkthroughs, but none are as thorough and clear as their channel.</p>
-<h2 id=parting-words>Parting Words</h2>
-<p>Practice makes perfect. And more often than not, practice is more fun with friends. The process can be stressful, so don&rsquo;t forget to take breaks.</p>
-<p>Special thanks to the upper-year ECE students who helped with proofreading the original document.</p>
-</article>
-</div>
-</section>
-<p>
+<p><strong>Read the prompt and ask questions to clarify assumptions.</strong> In particular, ask about possible input types. For instance, ask about empty strings, non-positive numbers, and edge-cases such as searching for non-existent keys in a dictionary.</p><blockquote>
+<p><em>&ldquo;What should I return if an empty array is given?&rdquo;</em></p></blockquote></li><li>
+<p>Go over sample inputs and outputs. This is a good opportunity to make sure you understand what the interviewer is asking for.</p></li><li>
+<p>Explain your thought process to the interviewer. If you&rsquo;re unsure, <strong>it&rsquo;s okay to ask the interviewer for hints on where to start</strong>. You can start with a &ldquo;brute-force&rdquo; solution and optimize through the interview.</p><blockquote>
+<p><em>&ldquo;It is possible to generate every single combination using two loops to find the correct combination.&rdquo;</em></p></blockquote></li><li>
+<p>Start writing code. Explain what you are doing as you write. Verbalizing your thought process allows the interviewer to understand and help should you get stuck. You don&rsquo;t need to explain everything, just the main implementation details.</p><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:green;font-weight:700>def</span> <span style=color:#00f>two_sum</span>(nums, target):
+</span></span><span style=display:flex><span>   <span style=color:green;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(<span style=color:green>len</span>(nums)<span style=color:#666>-</span><span style=color:#666>1</span>):
+</span></span><span style=display:flex><span>       <span style=color:green;font-weight:700>for</span> j <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(i<span style=color:#666>+</span><span style=color:#666>1</span>, <span style=color:green>len</span>(nums)):
+</span></span><span style=display:flex><span>           <span style=color:green;font-weight:700>if</span> nums[i] <span style=color:#666>+</span> nums[j] <span style=color:#666>==</span> target:
+</span></span><span style=display:flex><span>               <span style=color:green;font-weight:700>return</span> [i, j]
+</span></span><span style=display:flex><span>   <span style=color:#408080;font-style:italic># Assume we never reach this point</span>
+</span></span><span style=display:flex><span>   <span style=color:green;font-weight:700>return</span> []
+</span></span></code></pre></div></li><li>
+<p>Run the interviewer through your code with an example input. This is an opportunity to catch your own mistakes as you run through it.</p></li><li>
+<p>If the interviewer asks you to optimize the solution, there&rsquo;s a good chance a more efficient solution exists.Think about the time / space trade-offs. Hash tables are often the first data structure I think about when asked to optimize.</p><blockquote>
+<p><em>&ldquo;The solution given is O(n^2) where n is the length of nums. Maybe we can use a hash map to store values we&rsquo;ve seen.&rdquo;</em></p></blockquote><div class=highlight><pre tabindex=0 style=-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:green;font-weight:700>def</span> <span style=color:#00f>two_sum</span>(nums, target):
+</span></span><span style=display:flex><span>   seen <span style=color:#666>=</span> {}
+</span></span><span style=display:flex><span>   <span style=color:green;font-weight:700>for</span> i <span style=color:#a2f;font-weight:700>in</span> <span style=color:green>range</span>(<span style=color:green>len</span>(nums)):
+</span></span><span style=display:flex><span>       potentialTarget <span style=color:#666>=</span> target <span style=color:#666>-</span> nums[i]
+</span></span><span style=display:flex><span>       <span style=color:green;font-weight:700>if</span> potentialTarget <span style=color:#a2f;font-weight:700>in</span> seen:
+</span></span><span style=display:flex><span>           <span style=color:green;font-weight:700>return</span> [seen[potentialTarget], i]
+</span></span><span style=display:flex><span>       <span style=color:green;font-weight:700>else</span>:
+</span></span><span style=display:flex><span>           seen[nums[i]] <span style=color:#666>=</span> i
+</span></span><span style=display:flex><span>   <span style=color:#408080;font-style:italic># Assume we never reach here</span>
+</span></span><span style=display:flex><span>   <span style=color:green;font-weight:700>return</span> []
+</span></span></code></pre></div><blockquote>
+<p><em>&ldquo;If you store the values, you can compute the combinations in one traversal. If we do &rsquo;target - current&rsquo;, we can check if we&rsquo;ve already seen one of the values. This will be O(n) run-time and O(n) space complexity since it&rsquo;ll go through the nums array once.&rdquo;</em></p></blockquote></li><li>
+<p>You&rsquo;ll likely be asked to explain time and space complexity at the end. Be conscious of your complexity as you discuss the solution.</p></li></ol><p>During the interview, additional factors such as nerves may affect your performance. I&rsquo;ve found keeping track of time during the interview useful, as I have a tendency to be slow in implementing solutions. As you go through more interviews, you&rsquo;ll figure out what works best for you and what you may need to work on.</p><h2 id=building-your-understanding>Building Your Understanding</h2><p>LC has a Discuss tab featuring solutions from other users. Often, there are esoteric one-liner or uncommented solutions that are unhelpful to those beginning the problem. I recommend attempting each question for a period of time before looking at solutions for hints (eg. 15 min for Easy, 45 min for Medium). This allows you to keep moving forwards in your practice. Upon looking at the solution, give yourself time to continue implementing your solution. It is also important to revisit some of the problems you&rsquo;ve previously completed after a certain time to keep yourself practiced. You&rsquo;ll learn the most from implementing solutions without outside references or help.</p><p>If you&rsquo;re looking for video resources, I recommend <a href=https://www.youtube.com/c/BackToBackSWE/videos>BackToBackSWE</a> for LC question walkthroughs. Many channels provide walkthroughs, but none are as thorough and clear as their channel.</p><h2 id=parting-words>Parting Words</h2><p>Practice makes perfect. And more often than not, practice is more fun with friends. The process can be stressful, so don&rsquo;t forget to take breaks.</p><p>Special thanks to the upper-year ECE students who helped with proofreading the original document.</p></article></div></section><p>
 <a class=menu-item href=/posts>← return to blog</a>
-</p>
-<hr>
+</p><hr>
 <aside id=meta class=post-meta>
 <div>
 <a class=next href=https://kelvinkoon.github.io/posts/ubc-ece-electives/>← An ECE Electives Review</a>
-</div>
-</aside>
-</div><p class=copyright>made with hugo, © 2022</p>
-<p class=footer-links>
+</div></aside></div><p class=copyright>made with hugo, © 2022</p><p class=footer-links>
 <a class=source href=https://github.com/kelvinkoon/kelvinkoon.dev target=_blank>source</a>
 <a class=twitter href=https://twitter.com/NotCelsiusDeg target=_blank>twitter</a>
-</p>
-</body>
-</html>
+</p></body></html>
