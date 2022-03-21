@@ -262,6 +262,15 @@ img {
     border-radius: 8px;
 }
 
+#dark-mode-toggle {
+    color: #8bc5cd;
+    cursor: pointer;
+    float: right;
+    margin-right: 25px;
+    margin-top: 90px;
+    font-size: 35px;
+}
+
 h1 {
     font-family: "Open Sans", sans-serif;
 }

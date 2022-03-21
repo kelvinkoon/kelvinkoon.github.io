@@ -17,7 +17,7 @@ In the summer after my first year at UBC, I had the privilege of representing Ca
 
 ### babiri V1
 
-At the beginning of 2020, I wrote [babiri V1](https://github.com/kelvinkoon/babiri_v1) to help players gain insight on usage stats for the competitive scene. Though I wasn't actively competing in Pokémon any longer, I sensed there was potential in bringing data-driven analytics to the competitive scene. There was precedence for tools aimed at competitive players with sites such as [Pikalytics](https://www.pikalytics.com/) and VGCStats. What started as a single Python script writing to a CSV file became a tool with quite the following; the site garnering 100k visitors in its first few months and was even featured on the [Pokésports Podcast](https://www.youtube.com/watch?v=ZYbqsDLq994). Though the community was quite happy with babiri, it's been long overdue for a rewrite as tech debt and tight coupling have made it difficult to add new features.
+At the beginning of 2020, I wrote [babiri V1](https://github.com/kelvinkoon/babiri_v1) to help players gain insight on usage stats for the competitive scene. Though I wasn't actively competing in Pokémon any longer, I sensed there was potential in bringing data-driven analytics to the competitive scene. Being a former competitor also meant I could conveniently generate my own user stories. There was precedence for tools aimed at competitive players with sites such as [Pikalytics](https://www.pikalytics.com/) and VGCStats. What started as a single Python script writing to a CSV file became a tool with quite the following; the site garnering 100k visitors in its first few months and was even featured on the [Pokésports Podcast](https://www.youtube.com/watch?v=ZYbqsDLq994). Though the community was quite happy with babiri, it's been long overdue for a rewrite as tech debt and tight coupling have made it difficult to add new features.
 
 Following my last internship and graduation, I had 2 months without any commitments, which was the perfect time to tackle the rewrite. Though the end product is simple, there were some interesting abstractions and design decisions in babiri's backend and data pipeline. At the time of writing, I have indefinitely put the frontend on hold due to work commitments. However, I intend to deploy a fully functioning site at some point in the future.
 
@@ -48,7 +48,7 @@ There were a few notable objectives I aimed to hit for the backend and data pipe
 
 ## Tech Stack
 
-The rewrite featured a changes in its tech stack and infrastructure, but retained the majority of the V1 stack.
+The rewrite featured a few changes focused on infrastructurte, but retained the majority of the V1 stack.
 
 ### Golang
 
