@@ -273,18 +273,6 @@ img {
     font-size: 35px;
 }
 
-.next-prev-post {
-    text-align: center;
-}
-
-.previous {
-    float: right;
-}
-
-.next {
-    float: left;
-}
-
 h1 {
     font-family: "Open Sans", sans-serif;
 }
