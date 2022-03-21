@@ -1,4 +1,4 @@
-var toggle = document.getElementById("dark-mode-toggle");
+var toggle = document.getElementById("toggle");
 var darkTheme = document.getElementById("dark-mode-theme");
 // the default theme is light
 var savedTheme = localStorage.getItem("dark-mode-storage") || "light";
