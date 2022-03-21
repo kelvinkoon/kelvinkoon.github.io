@@ -273,12 +273,16 @@ img {
     font-size: 35px;
 }
 
-.next {
-    float: left;
+.next-prev-post {
+    text-align: center;
 }
 
 .previous {
     float: right;
+}
+
+.next {
+    float: left;
 }
 
 h1 {
