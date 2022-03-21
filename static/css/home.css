@@ -262,12 +262,14 @@ img {
     border-radius: 8px;
 }
 
-#dark-mode-toggle {
+.dark-mode-toggle {
     color: #8bc5cd;
     cursor: pointer;
     float: right;
-    margin-right: 25px;
-    margin-top: 90px;
+    margin-top: 45px;
+}
+
+.fas {
     font-size: 35px;
 }
 
