@@ -273,6 +273,14 @@ img {
     font-size: 35px;
 }
 
+.next {
+    float: left;
+}
+
+.previous {
+    float: right;
+}
+
 h1 {
     font-family: "Open Sans", sans-serif;
 }
