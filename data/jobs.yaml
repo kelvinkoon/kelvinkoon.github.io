@@ -1,7 +1,7 @@
 - name: Amazon
   link: https://www.amazon.ca/
   title: Software Development Engineer
-  team: Threat Engineering + Detection
+  team: Customer Service Security
   date: Feb 2022 - Present
 
 - name: Tesla
@@ -10,14 +10,8 @@
   team: Vehicle Software
   date: Sep 2021 - Dec 2021
 
-- name: Amazon
+- name: Amazon Web Services
   link: https://aws.amazon.com/
   title: SDE Intern
-  team: AWS Relational Database Service
+  team: RDS Platforms
   date: May 2021 - Jul 2021
-
-- name: Netgear
-  link: https://www.netgear.com/
-  title: Software Developer Co-op
-  team: Aircard
-  date: Aug 2018 - May 2019
