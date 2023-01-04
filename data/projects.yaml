@@ -9,11 +9,11 @@
       - link_name: media
         link: https://apsc.ubc.ca/news/2021/ubc-thunderbots-take-top-spot-international-robot-soccer-competition
 
-- name: Statsugiri.gg
-  github: https://github.com/StatsugiriGG
+- name: Statsugiri
+  github: https://github.com/Statsugiri
   desc: Competitive Pokémon data platform, served 100,000+ visitors
   links:
       - link_name: code
-        link: https://github.com/StatsugiriGG
+        link: https://github.com/Statsugiri
       - link_name: media
         link: https://www.youtube.com/watch?v=ZYbqsDLq994
