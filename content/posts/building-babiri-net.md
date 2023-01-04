@@ -1,9 +1,13 @@
 ---
-title: "Building babiri.net"
+title: "Building Babiri.net"
 date: 2022-02-26
-tags: ["project", "babiri", "full-stack"]
+tags: ["babiri", "aws", "project"]
 draft: false
 ---
+
+## Editor's Note
+
+As of 2023, babiri.net has been rebranded to [Statsugiri](https://github.com/StatsugiriGG/Statsugiri). To find out more, read [here]({{< ref "/posts/a-whole-new-whale" >}} "About Us").
 
 ## Prologue
 

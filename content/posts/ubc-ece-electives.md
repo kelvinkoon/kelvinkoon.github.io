@@ -1,5 +1,5 @@
 ---
-title: "An ECE Electives Review"
+title: "UBC ECE Electives Review"
 date: 2021-11-04
 tags: ["ubc", "academic"]
 draft: false
