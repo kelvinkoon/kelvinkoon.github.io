@@ -7,7 +7,7 @@ draft: false
 
 ## Editor's Note
 
-As of 2023, babiri.net has been rebranded to [Statsugiri](https://github.com/StatsugiriGG/Statsugiri). To find out more, read [here]({{< ref "/posts/a-whole-new-whale" >}} "About Us").
+As of 2023, babiri.net has been rebranded to [Statsugiri](https://github.com/Statsugiri/Statsugiri). To find out more, read [here]({{< ref "/posts/state-machines-pipelines-pokemon" >}}).
 
 ## Prologue
 
@@ -80,7 +80,7 @@ I opted to host the server on an [EC2](https://aws.amazon.com/ec2/) instance due
 
 The data pipeline is comprised of 3 main modules: `DataExtractor`, `LogHandler`, and `ModelTransformer`. It is named after [Drilbur](https://www.serebii.net/pokedex-swsh/drilbur/), the mole Pokémon. Below is a diagram representing data flow between modules.
 
-![Data Extractor Architecture](/images/Data_Extractor_Architecture.png)
+![Data Extractor Architecture](/images/DataExtractorArchitecture.png)
 
 The `DataExtractor` ingests, parses, and extracts replay data. The Lambda handler passes the format to run as an argument. The log retrieval process is as follows:
 
