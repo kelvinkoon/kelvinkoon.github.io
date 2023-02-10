@@ -80,7 +80,7 @@ I opted to host the server on an [EC2](https://aws.amazon.com/ec2/) instance due
 
 The data pipeline is comprised of 3 main modules: `DataExtractor`, `LogHandler`, and `ModelTransformer`. It is named after [Drilbur](https://www.serebii.net/pokedex-swsh/drilbur/), the mole Pokémon. Below is a diagram representing data flow between modules.
 
-![Data Extractor Architecture](/images/DataExtractorArchitecture.png)
+![Data Extractor Architecture](/images/DataExtractorArchitecture.png "Data pipeline modules.")
 
 The `DataExtractor` ingests, parses, and extracts replay data. The Lambda handler passes the format to run as an argument. The log retrieval process is as follows:
 
