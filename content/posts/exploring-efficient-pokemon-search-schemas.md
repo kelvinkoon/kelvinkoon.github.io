@@ -15,13 +15,15 @@ Upon finishing the [PS ingestion](/posts/state-machines-pipelines-pokemon) pipel
 
 You can find a full-size image of the high-level design [here](/images/PsTeamsServiceArchitecture.png).
 
-After some discussion, I opted for AWS Lambda and API Gateway to handle requests to the DynamoDB storage. Consideration was made for hosting the service on ECS Fargate with Elasticache, but the incurred additional cost and maintenance for compute wasn't a great trade-off. I ended up moving API Gateway to a separate CDK stack since it can be re-used to integrate with other services in the future. Deploying the stack is a time-consuming process since it also creates resources for associating the external domain. In particular, certificate validation via DNS takes time as does DNS propagation when associating a CNAME record with your external domain. The intended workflow is to deploy your service stack for console testing. When developers wish to test end-to-end, they can deploy the API Gateway stack after confirming their individual services are working as intended.
+After some discussion, I opted for AWS Lambda and API Gateway to handle requests to the DynamoDB storage. Consideration was made for hosting the service on ECS Fargate with Elasticache, but the incurred additional cost and maintenance for compute didn't feel justified. Fewer resources also means fewer points of failure.
+
+I ended up moving API Gateway to a separate CDK stack since it can be re-used to integrate with other services in the future. Deploying the stack is a time-consuming process since it also creates resources for associating the external domain. In particular, certificate validation via DNS takes time as does DNS propagation when associating a CNAME record with your external domain. The intended workflow is to deploy your service stack for console testing. When developers wish to test end-to-end, they can deploy the API Gateway stack after confirming their individual services are working as intended.
 
 ## Database Access Patterns
 
 For the current iteration, there were two primary use-cases.
 
--   Retrieving teams from a date (ie. 'snapshot date')
+-   Retrieving teams from a date (ie. "snapshot date")
 -   Filtering teams by certain Pokémon
     -   eg. return all teams with Arcanine and Palafin
 
