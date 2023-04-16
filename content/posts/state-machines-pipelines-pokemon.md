@@ -1,7 +1,7 @@
 ---
 title: "State Machines, Pipelines, and Pokémon"
 date: 2023-02-10
-tags: ["statsugiri", "aws", "data eng", "project"]
+tags: ["statsugiri", "aws", "data", "project"]
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Exploring Efficient Pokémon Search Schemas"
-date: 2023-04-14
+date: 2023-04-16
 tags: ["statsugiri", "aws", "backend", "project"]
 draft: false
 ---
@@ -61,7 +61,7 @@ Previously, Github Actions would build and push Docker images to Elastic Contain
 
 I previously investigated solving this with Github Actions's [paths](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onpushpull_requestpull_request_targetpathspaths-ignore) filter. The paths filter can detect changes and run workflows based on file changes, such as building the ingestion pipeline image only when changes were made to the directory. Simple solution, right?
 
-Unfortunately, I encountered many hurdles with this configuration. In fact, this [Stack Overflow post](https://stackoverflow.com/questions/71352117/running-a-github-actions-workflow-only-on-events-in-a-pull-request-events-that-c) seems to corroborate my experience where it isn't possible at the workflow level. Coincidentally, I stumbled upon this [post](https://dev.to/po5i/github-action-to-run-mypy-on-changed-files-only-3iip) on integrating the `changed-files` action, which is the same action suggested in the Stack Overflow post. My [workflow](https://github.com/Statsugiri/Statsugiri/blob/master/.github/workflows/on-merge-ps-ingestion-pipeline.yml#L30-L45) is similar, though it checks only for Python file changes within each directory. The production code doesn't depend on other file types (eg. `.txt`, `.json`) outside of tests, though that may change in the future. After a few dummy commits to test the workflow, I was happy to confirm it was working as intended. A little bit of Spring Cleaning for ECR.
+Unfortunately, I encountered many hurdles with this configuration. In fact, this [Stack Overflow post](https://stackoverflow.com/questions/71352117/running-a-github-actions-workflow-only-on-events-in-a-pull-request-events-that-c) seems to corroborate my experience where it isn't possible at the workflow level. Coincidentally, I stumbled upon this [post](https://dev.to/po5i/github-action-to-run-mypy-on-changed-files-only-3iip) on integrating the `changed-files` action, which is the same action suggested in the Stack Overflow post. My [workflow](https://github.com/Statsugiri/Statsugiri/blob/master/.github/workflows/on-merge-ps-ingestion-pipeline.yml#L30-L45) is similar, though it checks only for Python file changes within each directory. The production code doesn't depend on other file types (eg. `.txt`, `.json`) outside of tests, though that may change in the future. After a few dummy commits to test the workflow, I was happy to confirm it was Spring Cleaning for ECR.
 
 ## Conclusion
 
