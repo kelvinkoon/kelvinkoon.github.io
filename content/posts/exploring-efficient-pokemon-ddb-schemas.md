@@ -27,7 +27,7 @@ For the current iteration, there were two primary use-cases.
 -   Filtering teams by certain Pokémon
     -   eg. return all teams with Arcanine and Palafin
 
-I structured the API endpoints so clients were required to provide both a format and date. This allowed me to create a composite key to act as the sort key (eg. `gen9vgc2023regulationc#2023-04-11`) with a global secondary index (GSI). Thus, the first use-case is fulfilled through this schema design.
+I structured the API endpoints so clients were required to provide both a format and date. This allowed me to create a composite key to act as the sort key (eg. `gen9vgc2023regulationc#2023-04-11`). In addition, a global secondary index (GSI) was added to the composite key for querying. Thus, the first use-case is fulfilled through this schema design.
 
 The second use-case is a bit more interesting in how it can be tackled. Let's take a look at two options.
 
@@ -51,11 +51,11 @@ To efficiently filter by a Pokémon, the DynamoDB data producer can write each i
 
 Putting a GSI on the sort key lets DynamoDB do the heavy lifting for you. The sort key can be a composite key with the snapshot date (eg. `amoonguss#2023-04-14`) to make queries easier.
 
-Unfortunately, the design falls short when filtering for multiple Pokémon. Every Pokémon the client filters for is an additional query. In addition, every team requires up to 6 additional writes for each Pokémon in the team.[^1] Otherwise, a clever design to speed up reads when you have a set of items instead of forcing a GSI onto the column.
+Unfortunately, the design falls short when filtering for multiple Pokémon. Every Pokémon the client filters for is an additional query. In addition, every team requires up to 6 additional writes for each Pokémon in the team.[^1] The multiple item writes is a clever design for efficient reads when you have a set of items as an alternative to forcing a GSI onto the column.
 
 ### Client-Side Filtering
 
-Client-side filtering was the accepted choice given the payload size. With each query being relatively small (100 items at most, each item less than 400 bytes), client-side filtering isn't too costly from a performance standpoint. Even when filtering for multiple Pokémon, the performance had an acceptable latency[^2] compared to filtering for a single Pokémon.[^3] I could fulfill the second use-case in a single query with this design.
+Client-side filtering was the accepted choice given the payload size. With each query being relatively small (100 items at most, each item less than 400 bytes), client-side filtering isn't too costly from a performance standpoint. Even when filtering for multiple Pokémon, the performance has a comparable latency[^2] to filtering for a single Pokémon.[^3]
 
 ```
 | team_id     | composite (gsi)      | pkmn_team                      |
