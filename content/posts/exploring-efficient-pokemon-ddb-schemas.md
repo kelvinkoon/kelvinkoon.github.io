@@ -1,5 +1,5 @@
 ---
-title: "Exploring Efficient Pokémon Search Schemas"
+title: "Exploring Efficient Pokémon DynamoDB Schemas"
 date: 2023-04-16
 tags: ["statsugiri", "aws", "backend", "project"]
 draft: false
@@ -56,6 +56,14 @@ Unfortunately, the design falls short when filtering for multiple Pokémon. Ever
 ### Client-Side Filtering
 
 Client-side filtering was the accepted choice given the payload size. With each query being relatively small (100 items at most, each item less than 400 bytes), client-side filtering isn't too costly from a performance standpoint. Even when filtering for multiple Pokémon, the performance had an acceptable latency[^2] compared to filtering for a single Pokémon.[^3] I could fulfill the second use-case in a single query with this design.
+
+```
+| team_id     | composite (gsi)      | pkmn_team                      |
+| ----------- | -------------------- | ------------------------------ |
+| 1000        | vgcformat#2023-04-14 | ["amoonguss", "arcanine", ...] |
+| 1001        | vgcformat#2023-04-14 | ["chi-yu", "great tusk", ...]  |
+| 1002        | vgcformat#2023-04-15 | ["chien-pao", "dondozo", ...]  |
+```
 
 ## Building on Change with Github Actions
 
