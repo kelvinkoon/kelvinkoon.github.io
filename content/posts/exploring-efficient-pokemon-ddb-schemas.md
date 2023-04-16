@@ -58,7 +58,7 @@ Unfortunately, the design falls short when filtering for multiple Pokémon. Ever
 Client-side filtering was the accepted choice given the payload size. With each query being relatively small (100 items at most, each item less than 400 bytes), client-side filtering isn't too costly from a performance standpoint. Even when filtering for multiple Pokémon, the performance has a comparable latency[^2] to filtering for a single Pokémon.[^3]
 
 ```
-| team_id     | composite (gsi)      | pkmn_team                      |
+| team_id(pk) | composite (gsi+sk)   | pkmn_team                      |
 | ----------- | -------------------- | ------------------------------ |
 | 1000        | vgcformat#2023-04-14 | ["amoonguss", "arcanine", ...] |
 | 1001        | vgcformat#2023-04-14 | ["chi-yu", "great tusk", ...]  |
