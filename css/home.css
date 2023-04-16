@@ -371,3 +371,7 @@ hr {
     margin-top: 35px;
     width: 25%;
 }
+
+.footnote-ref {
+    border: none;
+}
