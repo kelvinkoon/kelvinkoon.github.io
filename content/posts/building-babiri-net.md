@@ -7,7 +7,7 @@ draft: false
 
 ## Editor's Note
 
-As of 2023, babiri.net has been rebranded to [Statsugiri](https://github.com/Statsugiri/Statsugiri). To find out more, read [here]({{< ref "/posts/state-machines-pipelines-pokemon" >}}).
+As of 2023, babiri.net has been rebranded to [Statsugiri](https://github.com/StatsugiriLabs/Statsugiri). To find out more, read [here]({{< ref "/posts/state-machines-pipelines-pokemon" >}}).
 
 ## Prologue
 
