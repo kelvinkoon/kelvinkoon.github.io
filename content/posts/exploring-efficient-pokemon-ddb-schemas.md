@@ -67,7 +67,7 @@ Client-side filtering was the accepted choice given the payload size. With each 
 
 ## Building on Change with Github Actions
 
-Previously, Github Actions would build and push Docker images to Elastic Container Registry (ECR) from every service when a pull request was merged. As a result, every merge cluttered the ECR repos with commit. On top of difficulty discerning images during deployment, additional costs were also incurring unnecessarily.
+Previously, Github Actions would build and push Docker images to Elastic Container Registry (ECR) from every service when a pull request was merged. As a result, every merge cluttered the ECR repos with superfluous images, making it difficult to discern images during deployment. Additional costs were also incurring with every commit.
 
 I previously investigated solving this with Github Actions's [paths](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onpushpull_requestpull_request_targetpathspaths-ignore) filter. The paths filter can detect changes and run workflows based on file changes, such as building the ingestion pipeline image only when changes were made to the directory. Simple solution, right?
 
