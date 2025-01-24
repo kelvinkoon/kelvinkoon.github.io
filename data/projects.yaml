@@ -1,14 +1,3 @@
-- name: UBC Thunderbots
-  github: https://github.com/UBC-Thunderbots/Software
-  desc: RoboCup SSL champions in autonomous soccer-playing robotics
-  links:
-      - link_name: demo
-        link: https://www.youtube.com/watch?v=pzRvbPzdZjY
-      - link_name: code
-        link: https://github.com/UBC-Thunderbots/Software
-      - link_name: media
-        link: https://apsc.ubc.ca/news/2021/ubc-thunderbots-take-top-spot-international-robot-soccer-competition
-
 - name: Statsugiri
   github: https://www.statsugiri.gg/
   desc: Competitive Pokémon data platform, served 100,000+ visitors
@@ -19,3 +8,14 @@
         link: https://github.com/StatsugiriLabs
       - link_name: media
         link: https://www.youtube.com/watch?v=ZYbqsDLq994
+
+- name: UBC Thunderbots
+  github: https://github.com/UBC-Thunderbots/Software
+  desc: RoboCup SSL champions in autonomous soccer-playing robotics
+  links:
+      - link_name: demo
+        link: https://www.youtube.com/watch?v=pzRvbPzdZjY
+      - link_name: code
+        link: https://github.com/UBC-Thunderbots/Software
+      - link_name: media
+        link: https://apsc.ubc.ca/news/2021/ubc-thunderbots-take-top-spot-international-robot-soccer-competition
