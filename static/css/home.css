@@ -341,7 +341,6 @@ li > a {
 li > a:hover {
     margin-top: 10px;
     color: #8bc5cd;
-    border-bottom: 2px solid #8bc5cd;
 }
 
 a {
@@ -355,6 +354,7 @@ a {
 a:hover {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
+    text-decoration: none;
     color: #e64a6a;
 }
 

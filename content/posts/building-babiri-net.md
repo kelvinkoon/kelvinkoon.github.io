@@ -5,23 +5,19 @@ tags: ["babiri", "aws", "project"]
 draft: false
 ---
 
-## Editor's Note
+_As of 2023, babiri.net has been rebranded to [Statsugiri](https://github.com/StatsugiriLabs/Statsugiri). To find out more, read [here]({{< ref "/posts/state-machines-pipelines-pokemon" >}})._
 
-As of 2023, babiri.net has been rebranded to [Statsugiri](https://github.com/StatsugiriLabs/Statsugiri). To find out more, read [here]({{< ref "/posts/state-machines-pipelines-pokemon" >}}).
-
-## Prologue
-
-After 2 months and 132 commits, [babiri V2](https://github.com/kelvinkoon/babiri_v2)'s API has been launched! babiri is comprised of an API for aggregated usage stats gathered from Pokémon Showdown replays. I'm particularly excited to share how babiri came to be, why it exists, and the technology powering the project. This post is also inspired by Kevin's [zeal.gg](https://kevinyap.ca/2020/03/architecting-zeal-gg/) write-up, which is a fantastic read on another competitive gaming tool.
+After 2 months and 132 commits, [babiri V2](https://github.com/kelvinkoon/babiri_v2)'s API has been launched! babiri is comprised of an API for aggregated usage stats gathered from Pokémon Showdown replays. I'm excited to share how babiri came to be and the technology powering the project. This post is inspired by Kevin's [zeal.gg](https://kevinyap.ca/2020/03/architecting-zeal-gg/) write-up, which is a fantastic read on another competitive gaming tool.
 
 ### A Children's Game
 
-In 2005, I received a copy of Pokémon Emerald for the Nintendo Game Boy. This would be my gateway to the Pokémon franchise, as I'd end up sinking countless hours into the series of games. I have fond memories challenging the Battle Frontier, capturing Shadow Lugia at Citadark Isle, hunting secret base flags in The Underground, and many more through the years. However, it wasn't until high school I discovered the Pokémon competitive scene.
+In 2005, I received a copy of Pokémon Emerald for the Nintendo Game Boy. This would be my gateway to the Pokémon franchise, as I'd sink countless hours into the series. I have fond memories of challenging the Battle Frontier, capturing Shadow Lugia at Citadark Isle, and hunting secret base flags in The Underground. However, it wasn't until high school when I discovered the competitive scene.
 
-In the summer after my first year at UBC, I had the privilege of representing Canada at the Pokémon World Championships. Prior to this, I had mostly attended local tournaments for the past 3 years. I decided to travel out of Canada for the 2016 season to make a bid for a Worlds invite. Through my efforts, I managed to place Top 16 at Oregon Regionals, Top 4 at [Seattle Regionals](https://www.pokemon.com/us/play-pokemon/spring-regional-championships-2016/teams/washington-masters/#team-kelvin-koon-masters-division-semi-finalist), and 1st at a stacked [Midseason Showdown](https://www.youtube.com/watch?v=tWtzO6odj-o) to secure my Worlds invite and a travel stipend to Nationals. Though I had mediocre placings at Nationals and Worlds, it was an unforgettable experience living out my childhood dreams for a year.
+In the summer after my first year of university, I had the privilege of representing Canada at the Pokémon World Championships. Through the circuit season, I managed to place Top 16 at Oregon Regionals, Top 4 at [Seattle Regionals](https://www.pokemon.com/us/play-pokemon/spring-regional-championships-2016/teams/washington-masters/#team-kelvin-koon-masters-division-semi-finalist), and won a stacked [Midseason Showdown](https://www.youtube.com/watch?v=tWtzO6odj-o) to secure my Worlds invite and a travel stipend to Nationals. Though I underperformed at Nationals and Worlds, it was an unforgettable experience living out my childhood dreams for a year.
 
 ### babiri V1
 
-At the beginning of 2020, I wrote [babiri V1](https://github.com/kelvinkoon/babiri_v1) to help players gain insight on usage stats for the competitive scene. Though I wasn't actively competing in Pokémon any longer, I sensed there was potential in bringing data-driven analytics to the competitive scene. Being a former competitor also meant I could conveniently generate my own user stories. There was precedence for tools aimed at competitive players with sites such as [Pikalytics](https://www.pikalytics.com/) and VGCStats. What started as a single Python script writing to a CSV file became a tool with quite the following; the site garnering 100k visitors in its first few months and was even featured on the [Pokésports Podcast](https://www.youtube.com/watch?v=ZYbqsDLq994). Though the community was quite happy with babiri, it's been long overdue for a rewrite as tech debt and tight coupling have made it difficult to add new features.
+At the beginning of 2020, I wrote [babiri V1](https://github.com/kelvinkoon/babiri_v1) to provide accessible usage competitive stats. Though I wasn't actively competing, I sensed potential in bringing data-driven analytics to the competitive scene. Being a former competitor also meant I understood the needs fairly well. There was precedence for tools aimed at competitive players with sites such as [Pikalytics](https://www.pikalytics.com/) and VGCStats. What started as a Python script writing to a CSV file became a tool which garnered 100k visitors in its first few months and was even featured on the [Pokésports Podcast](https://www.youtube.com/watch?v=ZYbqsDLq994). Though the community was quite happy with babiri, it's been long overdue for a rewrite as tech debt had made it difficult to add new features.
 
 Following my last internship and graduation, I had 2 months without any commitments, which was the perfect time to tackle the rewrite. Though the end product is simple, there were some interesting abstractions and design decisions in babiri's backend and data pipeline. At the time of writing, I have indefinitely put the frontend on hold due to work commitments. However, I intend to deploy a fully functioning site at some point in the future.
 
@@ -144,7 +140,7 @@ An interesting point about Go's garbage collection (GC) is related to why [Disco
 
 An additional benefit to caching is lower request latency due to bypassing database access. Though comprehensive benchmark tests were not conducted, local testing produced latency reduction by over a factor of 40,000 (specifically, the benchmark was 48.31 ms to 1.17 μs). That being said, implementing such a simple cache for solely latency reduction is not recommended as the difference is negligible in real-time.
 
-## Conclusion
+> _"I Tried My Best and I Have No Regrets" [[reference](https://www.reddit.com/r/pokemon/comments/vg2g4/this_line_has_always_really_stuck_with_me_for/)]_
 
 For how ambitious the timeline and scope was, I am quite happy with the final product. It was especially satisfying to have my coursework, internships, and design team experience culminate into a personal project. After being involved with Pokémon for so many years, working on babiri has been a great way to contribute back to the competitive scene. There's still much work to be done, but I look forward to presenting a finished product to the community. I hope to see more developers, statisticians, and anyone else working on competitive game tooling in the future.
 

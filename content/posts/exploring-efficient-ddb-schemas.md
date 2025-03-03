@@ -1,11 +1,9 @@
 ---
-title: "Exploring Efficient Pokémon DynamoDB Schemas"
+title: "Exploring Efficient DynamoDB Schemas"
 date: 2023-04-16
 tags: ["statsugiri", "aws", "backend", "project"]
 draft: false
 ---
-
-## Prologue
 
 Upon finishing the [PS ingestion](/posts/state-machines-pipelines-pokemon) pipeline, next on the list was to implement a back-end as a means to serve the team data. Thus, this post discusses design considerations for the aforementioned `PsTeamsService`. You can try out the API [here](https://api.statsugiri.gg/teams/gen9vgc2023regulationc/today), complete with [usage documentation](https://github.com/StatsugiriLabs/Statsugiri/wiki/PS-Teams-API-Usage).
 
