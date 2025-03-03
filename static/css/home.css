@@ -10,12 +10,14 @@ body {
     max-width: 600px;
     width: 85%;
     margin: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 img {
     max-width: 600px;
     width: 85%;
-    margin: 12px;
 }
 
 figure {
@@ -28,18 +30,18 @@ figure {
 }
 
 .menu-item {
-    font-size: 17px;
-    color: #087b9c;
+    font-size: 15px;
+    font-weight: normal;
     background-color: rgba(220, 220, 220, 0.3);
-    padding: 1px 2px 1px 2px;
+    padding: 1px 8px 1px 8px;
     border-bottom: none;
 }
 
 .menu-item:hover {
-    font-size: 17px;
+    font-size: 15px;
+    font-weight: normal;
     color: #8bc5cd;
-    background-color: rgba(220, 220, 220, 0.3);
-    padding: 1px 2px 1px 2px;
+    padding: 1px 8px 1px 8px;
     border-bottom: none;
 }
 
@@ -57,14 +59,18 @@ figure {
 }
 
 .home a {
-    font-family: "Inter", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 45px;
     color: black;
     border-bottom: none;
 }
 
 .home a:hover {
-    font-family: "Inter", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 45px;
     color: #e64a6a;
     border-bottom: none;
@@ -75,7 +81,9 @@ figure {
 }
 
 .header {
-    font-family: "Open Sans", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 25px;
     background: linear-gradient(
         180deg,
@@ -103,7 +111,7 @@ figure {
     font-family: "Open Sans", sans-serif;
     font-size: 19px;
     font-weight: bold;
-    color: #8bc5cd;
+    color: #e64a6a;
     border-bottom: none;
     transition: all 0.3s ease;
 }
@@ -341,7 +349,6 @@ a {
     font-size: 15px;
     color: #087b9c;
     text-decoration: none;
-    border-bottom: 2px solid #087b9c;
     transition: all 0.3s ease;
 }
 
@@ -349,7 +356,6 @@ a:hover {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
     color: #e64a6a;
-    border-bottom: 2px solid #e64a6a;
 }
 
 blockquote {
