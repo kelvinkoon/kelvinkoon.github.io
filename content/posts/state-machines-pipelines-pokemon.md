@@ -5,7 +5,9 @@ tags: ["statsugiri", "aws", "data", "project"]
 draft: false
 ---
 
-A year ago, I launched babiri's open-source API. The project's development halted shortly after as I acclimated to full-time work. The service proceeded to implode a few months after, left in radio silence until recently. Over the past few months, I've focused on developing a new suite of robust data tools. I'm happy to share what I've learned from industry to productionalize projects intersecting with my interests.
+## Prologue
+
+A year ago, I launched babiri's open-source API. The project's development halted shortly after as I acclimated to full-time work. The service proceeded to implode a few months after, left in radio silence until recently. With the advent of 2023, I've acquired the bandwidth to focus on developing a new suite of robust data tools. In particular, I'm happy to share what I've learned from industry to productionalize projects intersecting with my interests.
 
 This post primarily covers the architecture for the new pipeline for daily data ingest pertaining to [Pokémon Showdown](https://pokemonshowdown.com/) high-ranked teams.
 
@@ -35,7 +37,7 @@ Deploying the server on a single manually provisioned micro EC2 instance meant t
 
 ### Accessibility
 
-Accessing the API was possible through making requests, such as through CURL. For most users, the easiest method of making a request is through the browser. Should you go this path, the result is a massive JSON object bordering unreadable. I needed a middle-ground for making the data accessible for anyone in the community.
+Accessing the API was possible through making requests, such as through CURL. For non-technical audiences, the easiest method of making a request is through the browser. Should you go this path, the result is a massive JSON object bordering unreadable. I needed a middle-ground for making the data accessible for anyone in the community.
 
 ## Infrastructure Changes
 
@@ -71,9 +73,11 @@ The project uses Github Actions for its CI / CD pipeline just like its predecess
 
 I handled credentials for the Twitter API through Secrets Manager, which was manually provisioned for development and production environments. The credentials would be read from Secrets Manager and passed into the writer Lambda through environment variables. CDK streamlined the deployments between development and production greatly for this use-case.
 
-### A Short-Lived Whale
+### Current State
 
-Unfortunately, [Twitter](https://twitter.com/TwitterDev/status/1621026986784337922) announced they would begin charging for their API services. The costs made it difficult for a single developer to justify continuing work on the Twitterbot. Though short-lived, the Twitterbot generated positive feedback and saw an average of a few hundred views per day. Regardless of Twitter's future policies, it is the right call to invest effort into the core application for the future.
+Unfortunately, [Twitter](https://twitter.com/TwitterDev/status/1621026986784337922) announced they would begin charging for their API services. The costs made it difficult for a single developer to justify continuing work on the Twitterbot. Though short-lived, the Twitterbot generated positive feedback and saw an average of a few hundred views per day. Regardless of Twitter's future policies, it is the right call to invest engineering effort into the core application for the future.
+
+## Conclusion
 
 ### Treading Overengineering
 
