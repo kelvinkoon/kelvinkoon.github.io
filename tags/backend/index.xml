@@ -9,16 +9,4 @@
 
 &lt;/p&gt;
 &lt;p&gt;You can find a full-size image of the high-level design &lt;a href="https://kelvinkoon.github.io/images/PsTeamsServiceArchitecture.png"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;After some discussion, I opted for AWS Lambda and API Gateway to handle requests to the DynamoDB storage. Consideration was made for hosting the service on ECS Fargate, but the incurred additional cost and maintenance for compute didn&amp;rsquo;t feel justified. Fewer resources also means fewer points of failure.&lt;/p&gt;</description></item><item><title>Exploring Efficient Pokémon DynamoDB Schemas</title><link>https://kelvinkoon.github.io/posts/exploring-efficient-pokemon-ddb-schemas/</link><pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate><guid>https://kelvinkoon.github.io/posts/exploring-efficient-pokemon-ddb-schemas/</guid><description>&lt;h2 id="prologue"&gt;Prologue&lt;/h2&gt;
-&lt;p&gt;Upon finishing the &lt;a href="https://kelvinkoon.github.io/posts/state-machines-pipelines-pokemon"&gt;PS ingestion&lt;/a&gt; pipeline, next on the list was to implement a back-end as a means to serve the team data. Thus, this post discusses design considerations for the aforementioned &lt;code&gt;PsTeamsService&lt;/code&gt;. You can try out the API &lt;a href="https://api.statsugiri.gg/teams/gen9vgc2023regulationc/today"&gt;here&lt;/a&gt;, complete with &lt;a href="https://github.com/StatsugiriLabs/Statsugiri/wiki/PS-Teams-API-Usage"&gt;usage documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="serverless-simplicity"&gt;Serverless Simplicity&lt;/h2&gt;
-&lt;p&gt;
-
-&lt;figure&gt;
- &lt;img src="https://kelvinkoon.github.io/images/PsTeamsServiceArchitecture.png" alt="PS Teams Service Architecture" loading="lazy" /&gt;
- &lt;figcaption&gt;PS Teams Service high-level design.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;/p&gt;
-&lt;p&gt;You can find a full-size image of the high-level design &lt;a href="https://kelvinkoon.github.io/images/PsTeamsServiceArchitecture.png"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;After some discussion, I opted for AWS Lambda and API Gateway to handle requests to the DynamoDB storage. Consideration was made for hosting the service on ECS Fargate, but the incurred additional cost and maintenance for compute didn&amp;rsquo;t feel justified. Fewer resources also means fewer points of failure.&lt;/p&gt;</description></item></channel></rss>
