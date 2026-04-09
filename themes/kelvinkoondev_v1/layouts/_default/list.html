@@ -2,8 +2,8 @@
 <h2>
     <span class="header">{{ .Title }}</span>
 </h2>
-<p class="post-quote">"The truth about stories is, that's all we are."
-</br>- <a href="https://www.cbc.ca/radio/ideas/the-2003-cbc-massey-lectures-the-truth-about-stories-a-native-narrative-1.2946870" target=_blank>Thomas King</a></p>
+<p class="post-quote">"History has failed us, but no matter."
+<br>- <a href="https://www.minjinlee.com/" target="_blank">Min Jin Lee</a></p>
 {{ range .Pages.ByPublishDate.Reverse }}
 <table class="posts-info">
     <tr>
@@ -11,7 +11,7 @@
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </td>
         <td class="post-date">
-            <p>[{{ .Date | time.Format ":date_short" }}]</p>
+            <p>[{{ .Date | time.Format "01/02/2006" }}]</p>
         </td>
         </tr>
         <tr>

@@ -1,9 +1,7 @@
 - name: Statsugiri
-  github: https://www.statsugiri.gg/
+  github: https://github.com/StatsugiriLabs
   desc: Competitive Pokémon data platform, served 100,000+ visitors
   links:
-      - link_name: demo
-        link: https://www.statsugiri.gg/
       - link_name: code
         link: https://github.com/StatsugiriLabs
       - link_name: media

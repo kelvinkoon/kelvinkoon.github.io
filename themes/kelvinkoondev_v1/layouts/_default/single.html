@@ -3,15 +3,15 @@
     <h1>
         <span class="header">{{ .Title }}</span>
     </h1>
-    <p class="post-detail-date">{{ .Date.Format "Jan 2, 2006" }}  
+    <p class="post-detail-date">{{ .Date.Format "Jan 2, 2006" }}
         · {{ div .WordCount 130 }} min read</p>
     <div class="post-tags">
         {{ with .Params.tags }}
             [
-        {{ range $i, $t :=. }}{{ if $i }},{{ end }}
+            {{ range $i, $t := . }}{{ if $i }},{{ end }}
             <a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>
-        {{ end }}
-        ]
+            {{ end }}
+            ]
         {{ end }}
     </div>
     <h2>
@@ -20,24 +20,12 @@
     <div class="toc">
         {{ .TableOfContents }}
     </div>
-    <div>
-            <article id="content">
-                {{ .Content }}
-            </article>
-    </div>
+    <article class="post-content">
+        {{ .Content }}
+    </article>
 </section>
 <p>
     <a class="menu-item" href="/posts">← return to blog</a>
 </p>
 <hr>
-<!-- <aside id="meta" class="post-meta">
-    <div class="next-prev-post">
-        {{ with .NextInSection }}
-          <a class="next" href="{{.Permalink}}">← {{.Title}}</a>
-        {{ end }}
-        {{ with .PrevInSection }}
-          <a class="previous" href="{{.Permalink}}">{{.Title}} →</a>
-        {{ end }}
-    </div>
-</aside> -->
 {{ end }}

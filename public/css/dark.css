@@ -1,0 +1,334 @@
+/* Dark Mode - Base */
+html {
+    color-scheme: dark;
+}
+
+html,
+body {
+    background-color: #181a1b;
+    border-color: #736b5e;
+    color: #e8e6e3;
+}
+
+table {
+    border-color: #545b5e;
+}
+
+/* Dark Mode - Site Overrides */
+.toc a:hover {
+    color: rgb(138, 197, 205);
+}
+
+.post-content p {
+    color: #d8d4cf;
+}
+
+.post-content h2 {
+    color: rgb(97, 214, 247);
+    border-bottom-color: rgba(97, 214, 247, 0.2);
+}
+
+.post-content a {
+    text-decoration-color: rgba(97, 214, 247, 0.35);
+}
+
+.post-content a:hover {
+    text-decoration-color: rgb(231, 83, 114);
+}
+
+.menu-item {
+    color: rgb(97, 214, 247);
+    background-color: rgba(44, 47, 49, 0.3);
+    border-bottom-color: initial;
+}
+
+.menu-item:hover {
+    color: rgb(138, 197, 205);
+    background-color: rgba(44, 47, 49, 0.3);
+    border-bottom-color: initial;
+}
+
+.home a {
+    color: rgb(232, 230, 227);
+    border-bottom-color: initial;
+}
+
+.home a:hover {
+    color: rgb(231, 83, 114);
+    border-bottom-color: initial;
+}
+
+.header {
+    background-image: linear-gradient(
+        rgba(24, 26, 27, 0) 75%,
+        rgb(109, 97, 0) 75%
+    );
+    background-color: initial;
+}
+
+.job-name a {
+    color: rgb(97, 214, 247);
+    border-bottom-color: initial;
+}
+
+.job-name a:hover {
+    color: rgb(138, 197, 205);
+    border-bottom-color: initial;
+}
+
+.job-team {
+    color: rgba(209, 205, 199, 0.6);
+}
+
+.project-name a {
+    color: rgb(97, 214, 247);
+    border-bottom-color: initial;
+}
+
+.project-name a:hover {
+    color: rgb(138, 197, 205);
+    border-bottom-color: initial;
+}
+
+.post-quote {
+    border-left-color: rgb(10, 154, 196);
+}
+
+.post-title a {
+    color: rgb(97, 214, 247);
+    border-bottom-color: initial;
+}
+
+.post-title a:hover {
+    color: rgb(231, 83, 114);
+    border-bottom-color: initial;
+}
+
+.post-tags a {
+    border-bottom-color: initial;
+    color: rgba(209, 205, 199, 0.6);
+}
+
+.post-tags a:hover {
+    border-bottom-color: initial;
+}
+
+.post-detail-date {
+    color: rgba(209, 205, 199, 0.6);
+}
+
+.toc-header {
+    background-image: linear-gradient(
+        rgba(24, 26, 27, 0) 75%,
+        rgb(45, 98, 105) 75%
+    );
+    background-color: initial;
+}
+
+.highlight {
+    background-color: rgba(44, 47, 49, 0.3);
+}
+
+li > a {
+    background-color: rgba(44, 47, 49, 0.3);
+}
+
+li > a:hover {
+    color: rgb(138, 197, 205);
+    border-bottom-color: rgb(46, 99, 106);
+}
+
+a {
+    color: rgb(97, 214, 247);
+    text-decoration-color: initial;
+    border-bottom-color: rgb(10, 154, 196);
+}
+
+a:hover {
+    color: rgb(231, 83, 114);
+    border-bottom-color: rgb(144, 20, 45);
+}
+
+blockquote {
+    border-left-color: rgb(10, 154, 196);
+}
+
+hr {
+    background-color: rgb(45, 98, 105);
+    border-color: initial;
+}
+
+/* Dark Mode - Syntax Highlighting */
+.chroma {
+    color: rgb(232, 232, 213);
+    background-color: rgb(28, 30, 31);
+}
+.chroma .err {
+    color: rgb(255, 99, 182);
+    background-color: rgb(24, 0, 13);
+}
+.chroma .lntd {
+    border-color: initial;
+}
+.chroma .lntable {
+    border-color: initial;
+}
+.chroma .hl {
+    background-color: rgb(61, 61, 0);
+}
+.chroma .lnt {
+    color: rgb(152, 143, 129);
+}
+.chroma .ln {
+    color: rgb(152, 143, 129);
+}
+.chroma .k {
+    color: rgb(102, 217, 239);
+}
+.chroma .kc {
+    color: rgb(102, 217, 239);
+}
+.chroma .kd {
+    color: rgb(102, 217, 239);
+}
+.chroma .kn {
+    color: rgb(249, 53, 124);
+}
+.chroma .kp {
+    color: rgb(102, 217, 239);
+}
+.chroma .kr {
+    color: rgb(102, 217, 239);
+}
+.chroma .kt {
+    color: rgb(102, 217, 239);
+}
+.chroma .na {
+    color: rgb(174, 228, 64);
+}
+.chroma .nc {
+    color: rgb(174, 228, 64);
+}
+.chroma .no {
+    color: rgb(102, 217, 239);
+}
+.chroma .nd {
+    color: rgb(174, 228, 64);
+}
+.chroma .ne {
+    color: rgb(174, 228, 64);
+}
+.chroma .nf {
+    color: rgb(174, 228, 64);
+}
+.chroma .nx {
+    color: rgb(174, 228, 64);
+}
+.chroma .nt {
+    color: rgb(249, 53, 124);
+}
+.chroma .l {
+    color: rgb(166, 116, 255);
+}
+.chroma .ld {
+    color: rgb(230, 219, 114);
+}
+.chroma .s {
+    color: rgb(230, 219, 114);
+}
+.chroma .sa {
+    color: rgb(230, 219, 114);
+}
+.chroma .sb {
+    color: rgb(230, 219, 114);
+}
+.chroma .sc {
+    color: rgb(230, 219, 114);
+}
+.chroma .dl {
+    color: rgb(230, 219, 114);
+}
+.chroma .sd {
+    color: rgb(230, 219, 114);
+}
+.chroma .s2 {
+    color: rgb(230, 219, 114);
+}
+.chroma .se {
+    color: rgb(166, 116, 255);
+}
+.chroma .sh {
+    color: rgb(230, 219, 114);
+}
+.chroma .si {
+    color: rgb(230, 219, 114);
+}
+.chroma .sx {
+    color: rgb(230, 219, 114);
+}
+.chroma .sr {
+    color: rgb(230, 219, 114);
+}
+.chroma .s1 {
+    color: rgb(230, 219, 114);
+}
+.chroma .ss {
+    color: rgb(230, 219, 114);
+}
+.chroma .m {
+    color: rgb(166, 116, 255);
+}
+.chroma .mb {
+    color: rgb(166, 116, 255);
+}
+.chroma .mf {
+    color: rgb(166, 116, 255);
+}
+.chroma .mh {
+    color: rgb(166, 116, 255);
+}
+.chroma .mi {
+    color: rgb(166, 116, 255);
+}
+.chroma .il {
+    color: rgb(166, 116, 255);
+}
+.chroma .mo {
+    color: rgb(166, 116, 255);
+}
+.chroma .o {
+    color: rgb(249, 53, 124);
+}
+.chroma .ow {
+    color: rgb(249, 53, 124);
+}
+.chroma .c {
+    color: rgb(165, 158, 146);
+}
+.chroma .ch {
+    color: rgb(165, 158, 146);
+}
+.chroma .cm {
+    color: rgb(165, 158, 146);
+}
+.chroma .c1 {
+    color: rgb(165, 158, 146);
+}
+.chroma .cs {
+    color: rgb(165, 158, 146);
+}
+.chroma .cp {
+    color: rgb(165, 158, 146);
+}
+.chroma .cpf {
+    color: rgb(165, 158, 146);
+}
+.chroma .gd {
+    color: rgb(249, 53, 124);
+}
+.chroma .gi {
+    color: rgb(174, 228, 64);
+}
+.chroma .gu {
+    color: rgb(165, 158, 146);
+}
