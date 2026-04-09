@@ -38,11 +38,7 @@ figure {
 }
 
 .menu-item:hover {
-    font-size: 15px;
-    font-weight: normal;
     color: #8bc5cd;
-    padding: 1px 8px 1px 8px;
-    border-bottom: none;
 }
 
 .menu-item:first-of-type {
@@ -68,12 +64,7 @@ figure {
 }
 
 .home a:hover {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 45px;
     color: #e64a6a;
-    border-bottom: none;
 }
 
 .sub-nav {
@@ -87,8 +78,8 @@ figure {
     font-size: 25px;
     background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0) 60%,
-        #ffee62 50%
+        rgba(255, 255, 255, 0) 75%,
+        #ffee62 75%
     );
 }
 
@@ -108,12 +99,7 @@ figure {
 }
 
 .job-name a:hover {
-    font-family: "Open Sans", sans-serif;
-    font-size: 19px;
-    font-weight: bold;
     color: #e64a6a;
-    border-bottom: none;
-    transition: all 0.3s ease;
 }
 
 .job-date {
@@ -146,11 +132,8 @@ figure {
 }
 
 .nav-item:hover {
-    font-family: "Open Sans", sans-serif;
-    font-size: 18px;
     color: #e64a6a;
     cursor: pointer;
-    margin: 0px 10px 0px 0px;
 }
 
 .project-info {
@@ -169,12 +152,7 @@ figure {
 }
 
 .project-name a:hover {
-    font-family: "Open Sans", sans-serif;
-    font-size: 19px;
-    font-weight: bold;
     color: #8bc5cd;
-    border-bottom: none;
-    transition: all 0.3s ease;
 }
 
 .project-links {
@@ -193,8 +171,12 @@ figure {
 .posts-info {
     width: 100%;
     margin-left: -2px;
-    margin-bottom: 14px;
-    border-spacing: 2px 0px;
+    margin-bottom: 17px;
+    border-spacing: 2px 0;
+}
+
+.posts-info td {
+    padding: 0;
 }
 
 .post-quote {
@@ -209,6 +191,10 @@ figure {
     text-align: right;
 }
 
+.post-title {
+    vertical-align: bottom;
+}
+
 .post-title a {
     font-family: "Open Sans", sans-serif;
     font-size: 21px;
@@ -219,23 +205,20 @@ figure {
 }
 
 .post-title a:hover {
-    font-family: "Open Sans", sans-serif;
-    font-size: 21px;
-    font-weight: bold;
     color: #e64a6a;
-    border-bottom: none;
-    transition: all 0.3s ease;
 }
 
 .post-date p {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
+    margin: 0;
 }
 
 .post-tags {
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
-    margin-top: -8px;
+    padding-top: 3px;
+    padding-bottom: 6px;
 }
 
 .post-tags a {
@@ -243,12 +226,6 @@ figure {
     font-size: 13px;
     border-bottom: none;
     color: rgba(34, 36, 39, 0.6);
-}
-
-.post-tags a:hover {
-    font-family: "Open Sans", sans-serif;
-    font-size: 13px;
-    border-bottom: none;
 }
 
 .post-meta {
@@ -262,7 +239,11 @@ figure {
 }
 
 .toc {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.toc a:hover {
+    color: #8bc5cd;
 }
 
 .toc-header {
@@ -270,8 +251,8 @@ figure {
     font-size: 25px;
     background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0) 60%,
-        #8bc5cd 50%
+        rgba(255, 255, 255, 0) 75%,
+        #8bc5cd 75%
     );
 }
 
@@ -339,7 +320,6 @@ li > a {
 }
 
 li > a:hover {
-    margin-top: 10px;
     color: #8bc5cd;
 }
 
@@ -352,9 +332,6 @@ a {
 }
 
 a:hover {
-    font-family: "Open Sans", sans-serif;
-    font-size: 15px;
-    text-decoration: none;
     color: #e64a6a;
 }
 
@@ -380,4 +357,45 @@ hr {
 
 .footnote-ref {
     border: none;
+}
+
+/* Blog Article */
+.post-content p {
+    line-height: 1.75;
+    margin-bottom: 1em;
+    font-size: 16.5px;
+    color: #2c2c2c;
+}
+
+.post-content h2 {
+    margin-top: 1.8em;
+    margin-bottom: 0.4em;
+    color: #087b9c;
+    border-bottom: 1px solid rgba(8, 123, 156, 0.25);
+    padding-bottom: 0.3em;
+}
+
+.post-content h3 {
+    margin-top: 1.4em;
+    margin-bottom: 0.3em;
+}
+
+.post-content h4 {
+    margin-top: 1.1em;
+    margin-bottom: 0.2em;
+}
+
+.post-content li {
+    line-height: 1.65;
+    font-size: 16.5px;
+}
+
+.post-content a {
+    text-decoration: underline;
+    text-decoration-color: rgba(8, 123, 156, 0.35);
+    text-underline-offset: 3px;
+}
+
+.post-content a:hover {
+    text-decoration-color: #e64a6a;
 }

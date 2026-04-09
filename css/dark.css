@@ -1,179 +1,164 @@
-/*
-                        _______
-                       /       \
-                      .==.    .==.
-                     ((  ))==((  ))
-                    / "=="    "=="\
-                   /____|| || ||___\
-       ________     ____    ________  ___    ___
-       |  ___  \   /    \   |  ___  \ |  |  /  /
-       |  |  \  \ /  /\  \  |  |  \  \|  |_/  /
-       |  |   )  /  /__\  \ |  |__/  /|  ___  \
-       |  |__/  /  ______  \|  ____  \|  |  \  \
-_______|_______/__/ ____ \__\__|___\__\__|___\__\____
-|  ___  \ |  ____/ /    \   |  ___  \ |  ____|  ___  \
-|  |  \  \|  |___ /  /\  \  |  |  \  \|  |___|  |  \  \
-|  |__/  /|  ____/  /__\  \ |  |   )  |  ____|  |__/  /
-|  ____  \|  |__/  ______  \|  |__/  /|  |___|  ____  \
-|__|   \__\____/__/      \__\_______/ |______|__|   \__\
-                https://darkreader.org
-*/
-
-/*! Dark reader generated CSS | Licensed under MIT https://github.com/darkreader/darkreader/blob/master/LICENSE */
-
-/* User-Agent Style */
+/* Dark Mode - Base */
 html {
-    background-color: #181a1b !important;
+    color-scheme: dark;
 }
-html {
-    color-scheme: dark !important;
-}
+
 html,
 body {
     background-color: #181a1b;
-}
-html,
-body {
     border-color: #736b5e;
     color: #e8e6e3;
 }
-a {
-    color: #3391ff;
-}
+
 table {
     border-color: #545b5e;
 }
-::placeholder {
-    color: #b2aba1;
-}
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-select:-webkit-autofill {
-    background-color: #404400 !important;
-    color: #e8e6e3 !important;
-}
-::selection {
-    background-color: #004daa !important;
-    color: #e8e6e3 !important;
-}
-::-moz-selection {
-    background-color: #004daa !important;
-    color: #e8e6e3 !important;
+
+/* Dark Mode - Site Overrides */
+.toc a:hover {
+    color: rgb(138, 197, 205);
 }
 
-/* Invert Style */
-.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator
-{
-    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+.post-content p {
+    color: #d8d4cf;
 }
 
-/* Variables Style */
-:root {
-    --darkreader-neutral-background: #131516;
-    --darkreader-neutral-text: #d8d4cf;
-    --darkreader-selection-background: #004daa;
-    --darkreader-selection-text: #e8e6e3;
+.post-content h2 {
+    color: rgb(97, 214, 247);
+    border-bottom-color: rgba(97, 214, 247, 0.2);
 }
 
-/* Modified CSS */
+.post-content a {
+    text-decoration-color: rgba(97, 214, 247, 0.35);
+}
+
+.post-content a:hover {
+    text-decoration-color: rgb(231, 83, 114);
+}
+
 .menu-item {
     color: rgb(97, 214, 247);
     background-color: rgba(44, 47, 49, 0.3);
     border-bottom-color: initial;
 }
+
 .menu-item:hover {
     color: rgb(138, 197, 205);
     background-color: rgba(44, 47, 49, 0.3);
     border-bottom-color: initial;
 }
+
 .home a {
     color: rgb(232, 230, 227);
     border-bottom-color: initial;
 }
+
 .home a:hover {
     color: rgb(231, 83, 114);
     border-bottom-color: initial;
 }
+
 .header {
     background-image: linear-gradient(
-        rgba(24, 26, 27, 0) 60%,
-        rgb(109, 97, 0) 50%
+        rgba(24, 26, 27, 0) 75%,
+        rgb(109, 97, 0) 75%
     );
     background-color: initial;
 }
+
 .job-name a {
     color: rgb(97, 214, 247);
     border-bottom-color: initial;
 }
+
 .job-name a:hover {
     color: rgb(138, 197, 205);
     border-bottom-color: initial;
 }
+
 .job-team {
     color: rgba(209, 205, 199, 0.6);
 }
+
 .project-name a {
     color: rgb(97, 214, 247);
     border-bottom-color: initial;
 }
+
 .project-name a:hover {
     color: rgb(138, 197, 205);
     border-bottom-color: initial;
 }
+
 .post-quote {
     border-left-color: rgb(10, 154, 196);
 }
+
 .post-title a {
     color: rgb(97, 214, 247);
     border-bottom-color: initial;
 }
+
 .post-title a:hover {
     color: rgb(231, 83, 114);
     border-bottom-color: initial;
 }
+
 .post-tags a {
     border-bottom-color: initial;
     color: rgba(209, 205, 199, 0.6);
 }
+
 .post-tags a:hover {
     border-bottom-color: initial;
 }
+
 .post-detail-date {
     color: rgba(209, 205, 199, 0.6);
 }
+
 .toc-header {
     background-image: linear-gradient(
-        rgba(24, 26, 27, 0) 60%,
-        rgb(45, 98, 105) 50%
+        rgba(24, 26, 27, 0) 75%,
+        rgb(45, 98, 105) 75%
     );
     background-color: initial;
 }
+
 .highlight {
     background-color: rgba(44, 47, 49, 0.3);
 }
+
 li > a {
     background-color: rgba(44, 47, 49, 0.3);
 }
+
 li > a:hover {
     color: rgb(138, 197, 205);
     border-bottom-color: rgb(46, 99, 106);
 }
+
 a {
     color: rgb(97, 214, 247);
     text-decoration-color: initial;
     border-bottom-color: rgb(10, 154, 196);
 }
+
 a:hover {
     color: rgb(231, 83, 114);
     border-bottom-color: rgb(144, 20, 45);
 }
+
 blockquote {
     border-left-color: rgb(10, 154, 196);
 }
+
 hr {
     background-color: rgb(45, 98, 105);
     border-color: initial;
 }
+
+/* Dark Mode - Syntax Highlighting */
 .chroma {
     color: rgb(232, 232, 213);
     background-color: rgb(28, 30, 31);
@@ -346,24 +331,4 @@ hr {
 }
 .chroma .gu {
     color: rgb(165, 158, 146);
-}
-
-/* Override Style */
-.vimvixen-hint {
-    background-color: #7b5300 !important;
-    border-color: #d8b013 !important;
-    color: #f3e8c8 !important;
-}
-::placeholder {
-    opacity: 0.5 !important;
-}
-#edge-translate-panel-body,
-.MuiTypography-body1 {
-    color: var(--darkreader-neutral-text) !important;
-}
-gr-main-header {
-    background-color: #0f3a48 !important;
-}
-embed[type="application/pdf"][src="about:blank"] {
-    filter: invert(100%) contrast(90%);
 }
