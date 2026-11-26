@@ -2,6 +2,7 @@
 title: "LeetCode Intro Guide"
 date: 2021-08-14
 tags: ["career"]
+categories: ["Tech"]
 draft: false
 ---
 

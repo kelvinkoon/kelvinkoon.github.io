@@ -2,8 +2,19 @@
 <h2>
     <span class="header">{{ .Title }}</span>
 </h2>
-<p class="post-quote">"History has failed us, but no matter."
-<br>- <a href="https://www.minjinlee.com/" target="_blank">Min Jin Lee</a></p>
+<p class="post-quote" id="post-quote">
+<span class="post-quote-text" data-quote='"History has failed us, but no matter."<br>- <a href="https://www.minjinlee.com/" target="_blank">Min Jin Lee</a>' 
+    data-quote-alt='"I spend a lot of time in my head, and it&#39;s not a bad to be."<br>- <a href="https://www.redbull.com/ca-en/athlete/eileen-gu" target="_blank">Eileen Gu</a>'></span>
+</p>
+{{ if or (and (eq .Kind "section") (eq .Section "posts")) (and (eq .Kind "term") (eq .Data.Plural "categories")) }}
+{{ $activeCategory := "" }}
+{{ if eq .Kind "term" }}{{ $activeCategory = .Data.Term | urlize }}{{ end }}
+<div class="category-tabs">
+    <a class="category-tab{{ if eq $activeCategory "" }} active{{ end }}" href="{{ absURL "posts/" }}">All</a>
+    <a class="category-tab{{ if eq $activeCategory "tech" }} active{{ end }}" href="{{ absURL "categories/tech/" }}">Tech</a>
+    <a class="category-tab{{ if eq $activeCategory "personal" }} active{{ end }}" href="{{ absURL "categories/personal/" }}">Personal</a>
+</div>
+{{ end }}
 {{ range .Pages.ByPublishDate.Reverse }}
 <table class="posts-info">
     <tr>

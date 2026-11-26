@@ -1,7 +1,8 @@
 ---
 title: "UBC ECE Electives Review"
 date: 2021-11-04
-tags: ["ubc", "academic"]
+tags: ["academic"]
+categories: ["Tech"]
 draft: false
 ---
 
@@ -17,10 +18,10 @@ You'd think I would've taken all the courses I wanted after spending 6 years at 
 
 The electives listed are ones I would have taken given more semesters. I've also included details heard from previous students.
 
--   [CPEN411 (Computer Architecture)](https://ece.ubc.ca/courses/cpen-411/): The prominence of hardware for graphics and ML drew my interest in the course. Seemingly heavy workload with high expectations, which is on par with digital hardware courses here (eg. CPEN211).
--   [CPEN432 (Real-Time System Design)](https://ece.ubc.ca/courses/cpen-432/): Embedded courses aren't plentiful for ELEC and the opportunity to work with [FreeRTOS](https://www.freertos.org/) is neat. Without [CPEN331 (Operating Systems)](https://ece.ubc.ca/courses/cpen-331/) or [MATH220 (Mathematical Proof)](https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=220) credits, I felt underprepared (especially with using proofs for scheduling theory). Previous course offerings featured a heavy courseload, but curriculum and instructor changes have tried to address this.
--   [ELEC421 (Digital Signal and Image Processing)](https://ece.ubc.ca/courses/elec-421/): Despite struggling in [ELEC221](https://ece.ubc.ca/courses/elec-221/), I've heard good things about the course from my peers in terms of instructor and course content. Admittedly, I wouldn't have been too keen to touch MATLAB again.
--   [CPEN400D (Deep Learning)](https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=400D): The course has fantastic instructors, what more you ask for? I opted to take ELEC400M due to scheduling conflicts.
+- [CPEN411 (Computer Architecture)](https://ece.ubc.ca/courses/cpen-411/): The prominence of hardware for graphics and ML drew my interest in the course. Seemingly heavy workload with high expectations, which is on par with digital hardware courses here (eg. CPEN211).
+- [CPEN432 (Real-Time System Design)](https://ece.ubc.ca/courses/cpen-432/): Embedded courses aren't plentiful for ELEC and the opportunity to work with [FreeRTOS](https://www.freertos.org/) is neat. Without [CPEN331 (Operating Systems)](https://ece.ubc.ca/courses/cpen-331/) or [MATH220 (Mathematical Proof)](https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=220) credits, I felt underprepared (especially with using proofs for scheduling theory). Previous course offerings featured a heavy courseload, but curriculum and instructor changes have tried to address this.
+- [ELEC421 (Digital Signal and Image Processing)](https://ece.ubc.ca/courses/elec-421/): Despite struggling in [ELEC221](https://ece.ubc.ca/courses/elec-221/), I've heard good things about the course from my peers in terms of instructor and course content. Admittedly, I wouldn't have been too keen to touch MATLAB again.
+- [CPEN400D (Deep Learning)](https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=400D): The course has fantastic instructors, what more you ask for? I opted to take ELEC400M due to scheduling conflicts.
 
 ## Advanced Electives Review
 

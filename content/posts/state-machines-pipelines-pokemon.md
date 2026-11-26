@@ -1,7 +1,8 @@
 ---
 title: "State Machines, Pipelines, and Pokémon"
 date: 2023-02-10
-tags: ["statsugiri", "aws", "data", "project"]
+tags: ["statsugiri", "project"]
+categories: ["Tech"]
 draft: false
 ---
 
@@ -87,7 +88,7 @@ I built the first version of babiri in 6 weeks, which is a short time to deliver
 
 Some shoutouts to a few individuals.
 
--   [Tony Chen](https://www.linkedin.com/in/tonychenubc/): for providing design review feedback.
--   Everyone I talked to at Orlando Regionals. Plentiful ideas, just need to find the time to execute on them.
+- [Tony Chen](https://www.linkedin.com/in/tonychenubc/): for providing design review feedback.
+- Everyone I talked to at Orlando Regionals. Plentiful ideas, just need to find the time to execute on them.
 
 I recently also started a [Ko-Fi](https://ko-fi.com/statsugiri) to help with hosting costs and content creation (such as the post you're reading!). I'm hoping to write more as development continues.

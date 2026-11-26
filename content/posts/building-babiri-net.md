@@ -1,7 +1,8 @@
 ---
 title: "Building Babiri.net"
 date: 2022-02-26
-tags: ["babiri", "aws", "project"]
+tags: ["babiri", "project"]
+categories: ["Tech"]
 draft: false
 ---
 
@@ -45,10 +46,10 @@ There were few tools focused on Pokémon Showdown data, such as Pikalytics offer
 
 There were a few notable objectives I aimed to hit for the backend and data pipeline rewrite.
 
--   **Open-Source**: It was exciting seeing interest in open-source contributions following the first release. Making it open-source would help other developers make similar tools, as I've also received many questions on how I implemented certain features. It also provides an element of transparency, as babiri does not support botting to scout for private team replays. Indirectly, making the project open-source holds me accountable to write good code.
--   **Tests**: I've come to appreciate well-written tests since the first iteration. Though not the most exciting part of development, tests are crucial in saving developers from massive headaches when pushing new features.
--   **CI/CD**: Continuous Integration / Continuous Development is especially valuable with more than one developer on the project. Automating tests and formatting helps ensure linted and functioning code is merged. Github Actions was fairly straightforward for setting up a workflow for the project.
--   **Additional Formats**: Given the vast number of available formats, it was important to consider an easy way to provision adding or removing formats from the data pipeline and server.
+- **Open-Source**: It was exciting seeing interest in open-source contributions following the first release. Making it open-source would help other developers make similar tools, as I've also received many questions on how I implemented certain features. It also provides an element of transparency, as babiri does not support botting to scout for private team replays. Indirectly, making the project open-source holds me accountable to write good code.
+- **Tests**: I've come to appreciate well-written tests since the first iteration. Though not the most exciting part of development, tests are crucial in saving developers from massive headaches when pushing new features.
+- **CI/CD**: Continuous Integration / Continuous Development is especially valuable with more than one developer on the project. Automating tests and formatting helps ensure linted and functioning code is merged. Github Actions was fairly straightforward for setting up a workflow for the project.
+- **Additional Formats**: Given the vast number of available formats, it was important to consider an easy way to provision adding or removing formats from the data pipeline and server.
 
 ## Tech Stack
 
@@ -152,8 +153,8 @@ For how ambitious the timeline and scope was, I am quite happy with the final pr
 
 Though development was a sole effort, a few individuals helped me through the process.
 
--   [Leslie Cheng](https://lc.fyi/): for providing fantastic development advice, design review, and AWS infrastructure guidance.
--   [Tony Chen](https://www.linkedin.com/in/tonychenubc/): for providing design review and almost convincing me writing a cache wasn't worth it.
--   [Pikalytics](https://twitter.com/pikalytics): for always being willing to bounce ideas and leading exciting development in the field.
+- [Leslie Cheng](https://lc.fyi/): for providing fantastic development advice, design review, and AWS infrastructure guidance.
+- [Tony Chen](https://www.linkedin.com/in/tonychenubc/): for providing design review and almost convincing me writing a cache wasn't worth it.
+- [Pikalytics](https://twitter.com/pikalytics): for always being willing to bounce ideas and leading exciting development in the field.
 
 If you have any questions or suggestions pertaining to the project, feel free to message me on Twitter!

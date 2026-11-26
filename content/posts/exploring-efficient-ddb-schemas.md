@@ -1,7 +1,8 @@
 ---
 title: "Exploring Efficient DynamoDB Schemas"
 date: 2023-04-16
-tags: ["statsugiri", "aws", "backend", "project"]
+tags: ["statsugiri", "project"]
+categories: ["Tech"]
 draft: false
 ---
 
@@ -21,9 +22,9 @@ I ended up moving API Gateway to a separate CDK stack since it can be re-used to
 
 For the current iteration, there were two primary use-cases.
 
--   Retrieving teams from a date (ie. "snapshot date")
--   Filtering teams by certain Pokémon
-    -   eg. return all teams with Arcanine and Palafin
+- Retrieving teams from a date (ie. "snapshot date")
+- Filtering teams by certain Pokémon
+    - eg. return all teams with Arcanine and Palafin
 
 I structured the API endpoints so clients were required to provide both a format and date. This allowed me to create a composite key to act as the sort key (eg. `gen9vgc2023regulationc#2023-04-11`). In addition, a global secondary index (GSI) was added to the composite key for querying. Thus, the first use-case is fulfilled through this schema design.
 
@@ -76,5 +77,7 @@ Unfortunately, I encountered many hurdles with this configuration. In fact, this
 Though a relatively simple service, migrating to AWS / CDK has been a massive quality-of-life improvement for deployments and monitoring (ie. alarms and dashboards). With a backend deployed to prod, all that's left for an official launch is the UI. If you enjoyed this write-up, please consider supporting the project through [Ko-Fi](https://ko-fi.com/statsugiri) or [Github Sponsors](https://github.com/sponsors/kelvinkoon).
 
 [^1]: Pokémon Showdown enforces a minimum of 4 Pokémon per team, so every record has, at minimum, an additional 4 writes. That being said, most teams will have 6 Pokémon for competitive advantage.
+
 [^2]: Given it's a personal project, my tolerance for "acceptable" is anything less than a second. Certainly an unambitious bar, but an unnecessary worry until customers see a noticeable difference. Refer to my [caching write-up](https://kelvinkoon.dev/posts/building-babiri-net/#caching) for more thoughts.
+
 [^3]: Brief curl benchmarking showed about 130-150ms for both queries. Again, these seem like decent numbers until they aren't.
