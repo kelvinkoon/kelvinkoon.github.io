@@ -168,6 +168,27 @@ figure {
     font-size: 15px;
 }
 
+.category-tabs {
+    margin-bottom: 20px;
+}
+
+.category-tab {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    color: rgba(34, 36, 39, 0.6);
+    margin-right: 14px;
+    border-bottom: none;
+}
+
+.category-tab:hover {
+    color: #8bc5cd;
+}
+
+.category-tab.active {
+    color: #087b9c;
+    font-weight: bold;
+}
+
 .posts-info {
     width: 100%;
     margin-left: -2px;

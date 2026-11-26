@@ -94,6 +94,18 @@ table {
     border-left-color: rgb(10, 154, 196);
 }
 
+.category-tab {
+    color: rgba(209, 205, 199, 0.6);
+}
+
+.category-tab:hover {
+    color: rgb(138, 197, 205);
+}
+
+.category-tab.active {
+    color: rgb(97, 214, 247);
+}
+
 .post-title a {
     color: rgb(97, 214, 247);
     border-bottom-color: initial;

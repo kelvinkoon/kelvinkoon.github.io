@@ -22,3 +22,9 @@ function setTheme(mode) {
         toggle.className = "fas fa-moon";
     }
 }
+
+var quoteEl = document.querySelector(".post-quote-text");
+if (quoteEl) {
+    var quotes = [quoteEl.dataset.quote, quoteEl.dataset.quoteAlt];
+    quoteEl.innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
+}
